@@ -1,0 +1,6 @@
+2026/11/03-16:38:54.077 31b0 Reusing MANIFEST C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/11/03-16:38:54.081 31b0 Recovering log #10
+2026/11/03-16:38:54.082 31b0 Reusing old log C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/000010.log 
+2026/11/03-16:39:54.095 86c Level-0 table #14: started
+2026/11/03-16:39:54.098 86c Level-0 table #14: 14640 bytes OK
+2026/11/03-16:39:54.100 86c Delete type=0 #10

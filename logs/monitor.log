@@ -1,0 +1,115 @@
+2026-11-02 15:48:00 [INFO] ============================================================
+2026-11-02 15:48:00 [INFO] Facebook Housing Monitor started
+2026-11-02 15:48:00 [INFO] Interval: 90 seconds | Filter: STRICT
+2026-11-02 15:48:00 [INFO] ============================================================
+2026-11-02 15:48:00 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:48:00 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:48:00 [DEBUG] Cycle 1 done in 0.0s, sleeping 90.0s
+2026-11-02 15:49:30 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:49:30 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:49:30 [DEBUG] Cycle 2 done in 0.0s, sleeping 90.0s
+2026-11-02 15:51:00 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:51:00 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:51:00 [DEBUG] Cycle 3 done in 0.0s, sleeping 90.0s
+2026-11-02 15:52:30 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:52:30 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:52:30 [DEBUG] Cycle 4 done in 0.0s, sleeping 90.0s
+2026-11-02 15:54:00 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:54:00 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:54:00 [DEBUG] Cycle 5 done in 0.0s, sleeping 90.0s
+2026-11-02 15:55:30 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:55:30 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:55:30 [DEBUG] Cycle 6 done in 0.0s, sleeping 90.0s
+2026-11-02 15:57:00 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:57:00 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:57:00 [DEBUG] Cycle 7 done in 0.0s, sleeping 90.0s
+2026-11-02 15:58:30 [DEBUG] No JSON files in data/inbox/
+2026-11-02 15:58:30 [INFO] Collected 0 post(s) from inbox
+2026-11-02 15:58:30 [DEBUG] Cycle 8 done in 0.0s, sleeping 90.0s
+2026-11-02 16:00:00 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:00:00 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:00:00 [DEBUG] Cycle 9 done in 0.0s, sleeping 90.0s
+2026-11-02 16:01:30 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:01:30 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:01:30 [DEBUG] Cycle 10 done in 0.0s, sleeping 90.0s
+2026-11-02 16:03:00 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:03:00 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:03:00 [DEBUG] Cycle 11 done in 0.0s, sleeping 90.0s
+2026-11-02 16:04:30 [INFO] Processed file moved: test01.json → data/processed/
+2026-11-02 16:04:30 [INFO] Collected 1 post(s) from inbox
+2026-11-02 16:04:30 [ERROR] Telegram token or chat_id not configured in .env
+2026-11-02 16:04:30 [INFO] ✅ Notified | post=test-001 | confidence=high | keywords=['양도', '양도합니다', '계약 승계', '승계 가능']
+2026-11-02 16:04:30 [DEBUG] Cycle 12 done in 0.0s, sleeping 90.0s
+2026-11-02 16:04:32 [INFO] ============================================================
+2026-11-02 16:04:32 [INFO] Facebook Housing Monitor started
+2026-11-02 16:04:32 [INFO] Interval: 90 seconds | Filter: STRICT
+2026-11-02 16:04:32 [INFO] ============================================================
+2026-11-02 16:04:32 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:04:32 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:04:32 [DEBUG] Cycle 1 done in 0.0s, sleeping 90.0s
+2026-11-02 16:06:00 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:06:00 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:06:00 [DEBUG] Cycle 13 done in 0.0s, sleeping 90.0s
+2026-11-02 16:06:02 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:06:02 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:06:02 [DEBUG] Cycle 2 done in 0.0s, sleeping 90.0s
+2026-11-02 16:07:24 [INFO] ============================================================
+2026-11-02 16:07:24 [INFO] Facebook Housing Monitor started
+2026-11-02 16:07:24 [INFO] Interval: 90 seconds | Filter: STRICT
+2026-11-02 16:07:24 [INFO] ============================================================
+2026-11-02 16:07:24 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:07:24 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:07:24 [DEBUG] Cycle 1 done in 0.0s, sleeping 90.0s
+2026-11-02 16:08:54 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:08:54 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:08:54 [DEBUG] Cycle 2 done in 0.0s, sleeping 90.0s
+2026-11-02 16:10:24 [INFO] Processed file moved: test02.json → data/processed/
+2026-11-02 16:10:24 [INFO] Collected 1 post(s) from inbox
+2026-11-02 16:10:25 [INFO] Telegram sent OK for post_id=test-002
+2026-11-02 16:10:25 [INFO] ✅ Notified | post=test-002 | confidence=high | keywords=['양도', '양도합니다', '계약 승계', '승계 가능']
+2026-11-02 16:10:25 [DEBUG] Cycle 3 done in 1.0s, sleeping 89.0s
+2026-11-02 16:11:54 [DEBUG] No JSON files in data/inbox/
+2026-11-02 16:11:54 [INFO] Collected 0 post(s) from inbox
+2026-11-02 16:11:54 [DEBUG] Cycle 4 done in 0.0s, sleeping 90.0s
+2026-11-02 17:41:49 [INFO] ============================================================
+2026-11-02 17:41:49 [INFO] Facebook Housing Monitor AUTO started
+2026-11-02 17:41:49 [INFO] Interval: 90s | Mode: CloakBrowser | Filter: STRICT
+2026-11-02 17:41:49 [INFO] ============================================================
+2026-11-02 17:42:58 [INFO] Collected 0 post(s) from Facebook
+2026-11-02 17:42:58 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-02 17:42:58 [INFO] Sleeping 21s until next cycle...
+2026-11-02 17:44:26 [INFO] Collected 0 post(s) from Facebook
+2026-11-02 17:44:26 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-02 17:44:26 [INFO] Sleeping 23s until next cycle...
+2026-11-02 17:45:56 [INFO] Collected 0 post(s) from Facebook
+2026-11-02 17:45:56 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-02 17:45:56 [INFO] Sleeping 24s until next cycle...
+2026-11-02 22:33:35 [INFO] ============================================================
+2026-11-02 22:33:35 [INFO] Facebook Housing Monitor AUTO started
+2026-11-02 22:33:35 [INFO] Interval: 90s | Mode: CloakBrowser | Filter: STRICT
+2026-11-02 22:33:35 [INFO] ============================================================
+2026-11-02 22:41:01 [INFO] Collected 0 post(s) from Facebook
+2026-11-02 22:41:01 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-02 22:41:01 [INFO] Sleeping 1s until next cycle...
+2026-11-02 22:48:27 [INFO] Collected 0 post(s) from Facebook
+2026-11-02 22:48:27 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-02 22:48:27 [INFO] Sleeping 1s until next cycle...
+2026-11-02 22:51:43 [INFO] Collected 0 post(s) from Facebook
+2026-11-02 22:51:43 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-02 22:51:43 [INFO] Sleeping 1s until next cycle...
+2026-11-03 16:16:46 [INFO] ============================================================
+2026-11-03 16:16:46 [INFO] Facebook Housing Monitor AUTO started
+2026-11-03 16:16:46 [INFO] Interval: 90s | Mode: CloakBrowser | Filter: STRICT
+2026-11-03 16:16:46 [INFO] ============================================================
+2026-11-03 16:24:10 [INFO] Collected 0 post(s) from Facebook
+2026-11-03 16:24:10 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-03 16:24:10 [INFO] Sleeping 1s until next cycle...
+2026-11-03 16:31:30 [INFO] Collected 0 post(s) from Facebook
+2026-11-03 16:31:30 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-03 16:31:30 [INFO] Sleeping 1s until next cycle...
+2026-11-03 16:38:52 [INFO] Collected 0 post(s) from Facebook
+2026-11-03 16:38:52 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-03 16:38:52 [INFO] Sleeping 1s until next cycle...
+2026-11-03 16:46:12 [INFO] Collected 0 post(s) from Facebook
+2026-11-03 16:46:12 [INFO] Cycle done: 0 new, 0 matched/notified
+2026-11-03 16:46:12 [INFO] Sleeping 1s until next cycle...

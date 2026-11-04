@@ -1,0 +1,25 @@
+{
+  "poll_interval_seconds": 90,
+  "groups": [
+    {
+      "name": "Group 1",
+      "url": "https://www.facebook.com/groups/407563932237237",
+      "enabled": true
+    },
+    {
+      "name": "Group 2",
+      "url": "https://www.facebook.com/groups/2277447389250942",
+      "enabled": true
+    },
+    {
+      "name": "Group 3",
+      "url": "https://www.facebook.com/groups/nhuongnhahanquoc",
+      "enabled": true
+    },
+    {
+      "name": "Group 4",
+      "url": "https://www.facebook.com/groups/1165125500538674",
+      "enabled": true
+    }
+  ]
+}
