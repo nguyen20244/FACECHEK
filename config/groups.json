@@ -1,5 +1,5 @@
 {
-  "poll_interval_seconds": 90,
+  "poll_interval_seconds": 600,
   "groups": [
     {
       "name": "Group 1",
@@ -18,6 +18,16 @@
     },
     {
       "name": "Group 4",
+      "url": "https://www.facebook.com/groups/1165125500538674",
+      "enabled": true
+    },
+    {
+      "name": "Group 5",
+      "url": "https://www.facebook.com/groups/1183771555092025",
+      "enabled": true
+    },
+    {
+      "name": "Group 6",
       "url": "https://www.facebook.com/groups/1165125500538674",
       "enabled": true
     }

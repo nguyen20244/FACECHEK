@@ -2,42 +2,39 @@
   "_comment": "transfer = người nhượng phòng | seek = người tìm phòng",
 
   "transfer_keywords_ko": [
-    "양도", "양도합니다", "양도해요", "양도 가능",
-    "계약 승계", "계약승계", "승계 가능", "승계합니다",
-    "넘깁니다", "넘겨드립니다", "넘겨요",
-    "방 빼요", "방빼요", "퇴실", "퇴실합니다",
-    "내놓습니다", "내놓아요",
-    "구인 아님", "팔아요", "처분"
+    "서울대입구", "숭실", "양도해요", "양도 가능"
   ],
 
   "transfer_keywords_vi": [
     "pass oneroom",
     "mình muốn nhượng nhà",
-    "nhượng phòng", "nhượng lại", "nhượng hợp đồng",
+    "nhượng phòng", "nhượng lại", "đi bộ",
     "nhượng nhà ở", "nhượng nhà",
     "nhượng phòng oneroom",
-    "sang nhượng", "sang tên", "chuyển nhượng",
+    "sang nhượng", "Phòng ở", "chuyển nhượng",
     "sang lại phòng", "cần sang lại", "muốn sang lại",
-    "tìm người tiếp quản", "cần người tiếp quản", "tiếp quản hợp đồng",
+    "nhà ở ga", " cần nhượng 1 phòng", "Nhượng phòng ở",
     "trả phòng", "dọn ra", "hết hợp đồng sớm",
     "không ở được nữa", "cần người thay", "ai thay tôi",
     "cần nhượng", "muốn nhượng", "e nhượng", "mình nhượng",
     "cọc 5tr", "cọc 3tr", "cọc 1tr", "cọc 300",
-    "soongsil", "konte", "sangto"
+    "soongsil", "konte", "đi bộ", "đi bộ", "mình có nhà", "sạch",
+    "cách trường", "điện", "nước", "ở ga",
+    "ngay gần", "gần nhà", "Nhượng nhà", "địa chỉ", "nhà ở gần trường"
   ],
 
   "seek_keywords_ko": [
-    "구합니다", "구해요", "구하고 있어요",
-    "찾습니다", "찾아요", "찾고 있어요",
-    "방 있나요", "방 구해요", "원룸 구해요",
-    "추천해 주세요", "알려주세요"
+    "회기", "수유역", "구하고 있어요"
   ],
 
   "seek_keywords_vi": [
     "tìm phòng", "cần thuê", "muốn thuê",
-    "ai có phòng", "phòng trống không", "cho thuê không",
+    "ai có phòng", "phòng trống không", "muốn tìm nhà",
     "đang tìm phòng", "cần tìm phòng", "thuê phòng",
-    "giới thiệu cho tôi", "có ai biết không"
+    "quanh khu vực", "có ai biết không", "Cần tìm nhà 2 phòng",
+    "có ai nhượng nhà", " đang tìm nhà", "800", " 700",
+    "suyu", "có ai nhượng nhà", "có ai nhượng nhà",
+     "có ai nhượng nhà", "có ai nhượng nhà", "có ai nhượng nhà"
   ],
 
   "exclude_if_only_seek": true

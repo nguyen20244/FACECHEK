@@ -69,6 +69,16 @@ def insert_post(post: dict, result: dict) -> bool:
     return True
 
 
+def post_exists(post_id: str) -> bool:
+    """Kiểm tra nhanh post_id đã có trong DB chưa — dùng trước classify() để skip sớm."""
+    init_db()
+    with _get_conn() as conn:
+        row = conn.execute(
+            "SELECT 1 FROM posts WHERE post_id = ? LIMIT 1", (post_id,)
+        ).fetchone()
+    return row is not None
+
+
 def mark_notified(post_id: str):
     init_db()
     with _get_conn() as conn:

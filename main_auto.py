@@ -1,16 +1,21 @@
 """
 main_auto.py
+
 Vòng lặp chính dùng CloakBrowser tự động thu thập bài từ Facebook.
-Thay thế main.py (vốn dùng json_drop_collector).
+
+FIX #4: Heartbeat chạy SAU run_once (không trước) — tránh báo "bình thường" khi cycle đang fail
+FIX #5: elapsed chỉ tính thời gian run_once(), không bao gồm heartbeat
 
 Chạy:
-  python main_auto.py
+    python main_auto.py
 """
 
 import json
 import time
 from pathlib import Path
-from browser.fb_collector import collect_from_facebook
+
+# FIX #5 + #6 + #7: dùng wrapper an toàn — cap posts, guard text None, normalize
+from browser.fb_collector_safe import collect_posts_safe as collect_from_facebook
 from filters.strict_filter import classify
 from database.db import insert_post, mark_notified
 from telegram.notifier import send_post, send_heartbeat
@@ -27,14 +32,21 @@ def run_once():
     posts = collect_from_facebook()
     logger.info("Collected %d post(s) from Facebook", len(posts))
 
-    new_count      = 0
-    matched_count  = 0
+    new_count = 0
+    matched_count = 0
 
     for post in posts:
+        # FIX #8: Dedup TRƯỚC classify
+        from database.db import post_exists  # noqa: PLC0415
+        if post_exists(post["post_id"]):
+            continue
+
         result = classify(post["text"])
         is_new = insert_post(post, result)
+
         if not is_new:
-            continue
+            continue  # race condition
+
         new_count += 1
 
         if result["matched"]:
@@ -59,6 +71,7 @@ def run_once():
 
 def main():
     global _cycle
+
     logger.info("=" * 60)
     logger.info("Facebook Housing Monitor AUTO started")
     logger.info("Interval: %ss | Mode: CloakBrowser | Filter: STRICT", INTERVAL)
@@ -66,13 +79,9 @@ def main():
 
     while True:
         _cycle += 1
-        started = time.time()
 
-        if _cycle % _HEARTBEAT_EVERY == 0:
-            try:
-                send_heartbeat()
-            except Exception:
-                pass
+        # FIX #5: bắt đầu đếm elapsed CHỈ từ đây — không tính heartbeat
+        started = time.time()
 
         try:
             run_once()
@@ -80,6 +89,14 @@ def main():
             logger.exception("Cycle %d failed", _cycle)
 
         elapsed = time.time() - started
+
+        # FIX #4: heartbeat SAU run_once — đảm bảo cycle thực sự đã chạy xong
+        if _cycle % _HEARTBEAT_EVERY == 0:
+            try:
+                send_heartbeat()
+            except Exception:
+                logger.warning("Heartbeat failed (cycle %d)", _cycle)
+
         sleep_time = max(1, INTERVAL - elapsed)
         logger.info("Sleeping %.0fs until next cycle...", sleep_time)
         time.sleep(sleep_time)

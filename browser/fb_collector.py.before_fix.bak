@@ -1,0 +1,223 @@
+"""
+fb_collector.py - CloakBrowser tự động chọn "Bài viết mới" rồi cuộn đọc bài.
+"""
+
+import re
+import time
+import json
+import hashlib
+from pathlib import Path
+from datetime import datetime, timezone
+import cloakbrowser
+from urllib.parse import urljoin
+
+PROFILE_DIR  = Path("data/cloak_profile").resolve()
+GROUP_CONFIG = json.loads(Path("config/groups.json").read_text(encoding="utf-8"))
+GROUPS       = [g for g in GROUP_CONFIG["groups"] if g.get("enabled")]
+SCROLL_TIMES = 5
+SCROLL_PAUSE = 2.5
+PAGE_TIMEOUT = 30_000
+HEADLESS     = False
+
+POST_SELECTORS = [
+    'div[data-pagelet^="FeedUnit"]',
+    'div[role="article"]',
+]
+
+# Selector nút lọc + text "Bài viết mới"
+FILTER_BUTTON_SELECTORS = [
+    'div[aria-label="Bộ lọc bảng tin"]',
+    'div[aria-label="Feed filter"]',
+    'div[aria-label="뉴스피드 필터"]',
+    'span[role="button"]',
+]
+NEW_POST_TEXT = ["Bài viết mới", "New posts", "최신 게시물", "最新帖子"]
+
+
+def _safe_text(el) -> str:
+    try:
+        return el.inner_text(timeout=3000).strip()
+    except Exception:
+        return ""
+
+
+def _extract_post_id(url: str) -> str:
+    m = re.search(r'/posts/(\d+)', url)
+    if m: return m.group(1)
+    m = re.search(r'story_fbid=(\d+)', url)
+    if m: return m.group(1)
+    return hashlib.md5(url.encode()).hexdigest()[:16]
+
+
+def _click_newest_filter(page):
+    """Tìm và click nút 'Bài viết mới' để sắp xếp theo mới nhất."""
+    try:
+        # Thử click nút bộ lọc
+        for sel in FILTER_BUTTON_SELECTORS:
+            try:
+                btn = page.query_selector(sel)
+                if btn:
+                    btn.click()
+                    time.sleep(1.5)
+                    break
+            except Exception:
+                continue
+
+        # Tìm option "Bài viết mới" trong dropdown
+        for text in NEW_POST_TEXT:
+            try:
+                # Tìm theo text content
+                option = page.get_by_text(text, exact=True).first
+                if option:
+                    option.click()
+                    print(f"  ✅ Đã chọn bộ lọc: {text}")
+                    time.sleep(2)
+                    return True
+            except Exception:
+                continue
+
+        # Fallback: tìm span có class Facebook dùng (từ ảnh bạn chụp)
+        try:
+            spans = page.query_selector_all('span.x193iq5w')
+            for span in spans:
+                t = _safe_text(span)
+                if t in NEW_POST_TEXT:
+                    span.click()
+                    print(f"  ✅ Đã chọn bộ lọc (fallback): {t}")
+                    time.sleep(2)
+                    return True
+        except Exception:
+            pass
+
+        print("  ⚠️ Không tìm thấy nút 'Bài viết mới', dùng mặc định")
+        return False
+
+    except Exception as e:
+        print(f"  ⚠️ Lỗi chọn bộ lọc: {e}")
+        return False
+
+
+def _parse_posts(page, group_name: str) -> list[dict]:
+    posts = []
+    elements = []
+    for sel in POST_SELECTORS:
+        try:
+            els = page.query_selector_all(sel)
+            if els:
+                elements = els
+                break
+        except Exception:
+            continue
+
+    for el in elements:
+        try:
+            text = _safe_text(el)
+            if len(text) < 10:
+                continue
+
+            post_url = page.url
+            try:
+                link = el.query_selector('a[href*="/posts/"], a[href*="story_fbid"]')
+                if link:
+                    href = link.get_attribute("href") or ""
+                    if href.startswith("/"):
+                        href = "https://www.facebook.com" + href
+                    post_url = href.split("?")[0]
+            except Exception:
+                pass
+
+            post_id = _extract_post_id(post_url)
+
+            created_at = datetime.now(timezone.utc).isoformat()
+            try:
+                t = el.query_selector("abbr[data-utime], span[data-utime]")
+                if t:
+                    ut = t.get_attribute("data-utime")
+                    if ut:
+                        created_at = datetime.fromtimestamp(int(ut), tz=timezone.utc).isoformat()
+            except Exception:
+                pass
+
+            posts.append({
+                "post_id":    post_id,
+                "group":      group_name,
+                "text":       text[:2000],
+                "url":        post_url,
+                "created_at": created_at,
+            })
+        except Exception:
+            continue
+
+    seen, unique = set(), []
+    for p in posts:
+        if p["post_id"] not in seen:
+            seen.add(p["post_id"])
+            unique.append(p)
+    return unique
+
+
+def collect_from_facebook() -> list[dict]:
+    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    all_posts = []
+
+    context = cloakbrowser.launch_persistent_context(
+        user_data_dir=str(PROFILE_DIR),
+        headless=HEADLESS,
+        args=["--disable-notifications"],
+    )
+
+    try:
+        page = context.new_page()
+        page.goto("https://www.facebook.com/", timeout=PAGE_TIMEOUT)
+        time.sleep(3)
+
+        if "login" in page.url or "checkpoint" in page.url:
+            print("[ERROR] Chưa đăng nhập. Chạy browser/cloak_session.py trước.")
+            context.close()
+            return []
+
+        for group in GROUPS:
+            name = group["name"]
+            url  = group["url"]
+            print(f"\n[INFO] Quét group: {name}")
+
+            try:
+                page.goto(url, timeout=PAGE_TIMEOUT)
+                time.sleep(3)
+
+                # ← Chọn "Bài viết mới" trước khi cuộn
+                _click_newest_filter(page)
+
+                # Cuộn để load thêm bài
+                for i in range(SCROLL_TIMES):
+                    page.evaluate("window.scrollBy(0, window.innerHeight * 2)")
+                    time.sleep(SCROLL_PAUSE)
+                    print(f"  Cuộn {i+1}/{SCROLL_TIMES}...")
+
+                posts = _parse_posts(page, name)
+                print(f"  → Thu được {len(posts)} bài")
+                all_posts.extend(posts)
+
+            except Exception as e:
+                print(f"[WARN] Lỗi group {name}: {e}")
+                continue
+
+        page.close()
+
+    finally:
+        try:
+            context.close()
+        except Exception:
+            pass
+
+    print(f"\n[INFO] Tổng: {len(all_posts)} bài từ {len(GROUPS)} group")
+    return all_posts
+
+
+if __name__ == "__main__":
+    posts = collect_from_facebook()
+    print("\n=== 5 BÀI ĐẦU ===")
+    for p in posts[:5]:
+        print(f"\nID : {p['post_id']}")
+        print(f"Text: {p['text'][:150]}")
+        print(f"URL : {p['url']}")
