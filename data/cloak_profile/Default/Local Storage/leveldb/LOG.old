@@ -1,6 +1,6 @@
-2026/11/05-16:23:09.792 5548 Reusing MANIFEST C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/11/05-16:23:09.793 5548 Recovering log #168
-2026/11/05-16:23:09.794 5548 Reusing old log C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/000168.log 
-2026/11/05-16:24:09.804 dc4 Level-0 table #171: started
-2026/11/05-16:24:09.812 dc4 Level-0 table #171: 11952 bytes OK
-2026/11/05-16:24:09.813 dc4 Delete type=0 #168
+2026/11/07-02:27:03.088 5248 Reusing MANIFEST C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/11/07-02:27:03.089 5248 Recovering log #292
+2026/11/07-02:27:03.090 5248 Reusing old log C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/000292.log 
+2026/11/07-02:31:52.425 5248 Level-0 table #296: started
+2026/11/07-02:31:52.430 5248 Level-0 table #296: 12052 bytes OK
+2026/11/07-02:31:52.435 5248 Delete type=0 #292
