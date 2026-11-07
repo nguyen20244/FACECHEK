@@ -24,21 +24,13 @@
       "name": "Group 4",
       "url": "https://www.facebook.com/groups/1165125500538674",
       "enabled": true,
-      "batch": 2,
-      "_note": "⚠️ Trùng URL với Group 6 — cần đổi URL đúng"
-    },
-    {
-      "name": "Group 5",
-      "url": "https://www.facebook.com/groups/1183771555092025",
-      "enabled": true,
       "batch": 2
     },
     {
-      "name": "Group 6",
-      "url": "https://www.facebook.com/groups/1165125500538674",
+      "name": "Group 5",
+      "url": "https://www.facebook.com/groups/557028531654303",
       "enabled": true,
-      "batch": 2,
-      "_note": "⚠️ Trùng URL với Group 4 — cần đổi URL đúng"
+      "batch": 2
     }
   ]
 }

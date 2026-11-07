@@ -1544,3 +1544,1991 @@ playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page
 2026-11-07 02:32:45 [INFO] [Cycle 77] Hoàn thành 343s | 0 bài mới | 0 match | Nghỉ 257s
 2026-11-07 02:37:02 [INFO] 
 [Cycle 78] Bắt đầu...
+2026-11-07 03:58:52 [INFO] ============================================================
+2026-11-07 03:58:52 [INFO] Facebook Housing Monitor AUTO — BATCH MODE
+2026-11-07 03:58:52 [INFO] Interval: 600s | Batch pause: 60s | Filter: STRICT v2
+2026-11-07 03:58:52 [INFO] ============================================================
+2026-11-07 03:58:52 [INFO] 
+[Cycle 1] Bắt đầu...
+2026-11-07 03:59:38 [ERROR] Cycle 1 failed
+Traceback (most recent call last):
+  File "C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\main_auto.py", line 143, in main
+    new, matched = run_once()
+  File "C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\main_auto.py", line 106, in run_once
+    batched = collect_by_batch()  # {1: [...], 2: [...]}
+  File "C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\browser\fb_collector.py", line 422, in collect_by_batch
+    posts = _scrape_groups(context, groups_in_batch)
+  File "C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\browser\fb_collector.py", line 328, in _scrape_groups
+    page = context.new_page()
+  File "C:\Users\nguyen\AppData\Local\Programs\Python\Python310\lib\site-packages\cloakbrowser\browser.py", line 93, in __call__
+    return self._fn(*args, **kwargs)
+  File "C:\Users\nguyen\AppData\Local\Programs\Python\Python310\lib\site-packages\cloakbrowser\browser.py", line 144, in guarded
+    result = original(*args, **kwargs)
+  File "C:\Users\nguyen\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\sync_api\_generated.py", line 12815, in new_page
+    return mapping.from_impl(self._sync(self._impl_obj.new_page()))
+  File "C:\Users\nguyen\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "C:\Users\nguyen\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_browser_context.py", line 335, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+  File "C:\Users\nguyen\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Users\nguyen\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-11-07 03:59:38 [INFO] [Cycle 1] Hoàn thành 46s | 0 bài mới | 0 match | Nghỉ 554s
+2026-11-07 04:09:34 [INFO] ============================================================
+2026-11-07 04:09:34 [INFO] Facebook Housing Monitor AUTO — BATCH MODE
+2026-11-07 04:09:34 [INFO] Interval: 600s | Batch pause: 60s | Filter: STRICT v3
+2026-11-07 04:09:34 [INFO] ============================================================
+2026-11-07 04:09:34 [INFO] 
+[Cycle 1] Bắt đầu...
+2026-11-07 04:12:46 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 04:12:46 [DEBUG] skip exists | 1137822875878002 | Chuyển Nhà Seoul · 10 giờ · Quản trị viên ....
+2026-11-07 04:12:46 [DEBUG] skip exists | 1137712665889023 | StunningPelican6797 · 1 ngày Tìm nhà ở ghép ko ạ
+2026-11-07 04:12:46 [DEBUG] skip exists | 1137660042560952 | KeenOctopus444 · 1 ngày Mik cs nhà ở 회기역 bn check 
+2026-11-07 04:12:46 [DEBUG] skip exists | 4541198879542437 | Phạm T. Hương · 1 ngày · Mọi người ơi ib em ạ. Em 
+2026-11-07 04:12:46 [DEBUG] ❌ Filtered | post=4541115392884119 | reason=no_transfer_keyword | score=0
+2026-11-07 04:12:46 [DEBUG] skip exists | 4540918099570515 | Thùy Linh · 1 ngày Phòng ở 2 thôi ạ, nếu cần ib ạ,
+2026-11-07 04:12:46 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 04:12:46 [DEBUG] ❌ Filtered | post=1160998526880247 | reason=no_transfer_keyword | score=0
+2026-11-07 04:12:46 [DEBUG] skip exists | 1160814770231956 | Nguyễn Thuý · 1 ngày Em sang r hả Nbang
+2026-11-07 04:12:46 [DEBUG] skip exists | 1160568186923281 | Người tham gia ẩn danh 387 · 1 ngày01065813266 ib 
+2026-11-07 04:12:46 [INFO] [Batch 1] Xong: 2 bài mới, 0 match/gửi Telegram
+2026-11-07 04:12:46 [INFO] [Batch 2] 0 bài thu được — bắt đầu xử lý...
+2026-11-07 04:12:46 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 04:12:46 [INFO] [Cycle 1] Hoàn thành 191s | 2 bài mới | 0 match | Nghỉ 409s
+2026-11-07 04:18:30 [INFO] ============================================================
+2026-11-07 04:18:30 [INFO] Facebook Housing Monitor AUTO — BATCH MODE
+2026-11-07 04:18:30 [INFO] Interval: 600s | Batch pause: 60s | Filter: STRICT v3
+2026-11-07 04:18:30 [INFO] ============================================================
+2026-11-07 04:18:30 [INFO] 
+[Cycle 1] Bắt đầu...
+2026-11-07 04:22:05 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 04:22:05 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 04:22:05 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 04:22:05 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 04:22:05 [DEBUG] ❌ Filtered | post=4541529092842749 | reason=no_transfer_keyword | score=0
+2026-11-07 04:22:05 [INFO] ⚠️ Missed long post | len=49 | score=0 | reason=no_transfer_keyword | preview=La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 04:22:05 [DEBUG] ❌ Filtered | post=4541456306183361 | reason=no_transfer_keyword | score=0
+2026-11-07 04:22:05 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 14 giờ Cần tìm ng ở ghép k
+2026-11-07 04:22:05 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 14 giờ Cần tìm ng ở ghép k
+2026-11-07 04:22:05 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 7 giờ Tháng 12 vào ở 
+2026-11-07 04:22:05 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 22 giờ cần phòng thì ib mình nha 
+2026-11-07 04:22:05 [INFO] [Batch 1] Xong: 2 bài mới, 0 match/gửi Telegram
+2026-11-07 04:22:05 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 04:22:05 [INFO] ⚠️ Missed long post | len=51 | score=0 | reason=no_transfer_keyword | preview=AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15km
+2026-11-07 04:22:05 [DEBUG] ❌ Filtered | post=2909711112746762 | reason=no_transfer_keyword | score=0
+2026-11-07 04:22:05 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 04:22:05 [INFO] ⚠️ Missed long post | len=47 | score=0 | reason=no_transfer_keyword | preview=ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 04:22:05 [DEBUG] ❌ Filtered | post=4330993407036475 | reason=no_transfer_keyword | score=0
+2026-11-07 04:22:05 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 04:22:05 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 20 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 04:22:05 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 04:22:05 [INFO] [Batch 2] Xong: 2 bài mới, 0 match/gửi Telegram
+2026-11-07 04:22:05 [INFO] [Cycle 1] Hoàn thành 215s | 4 bài mới | 0 match | Nghỉ 385s
+2026-11-07 04:28:30 [INFO] 
+[Cycle 2] Bắt đầu...
+2026-11-07 04:32:08 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 04:32:08 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 04:32:08 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 04:32:08 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 04:32:08 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 04:32:08 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 04:32:08 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 04:32:08 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 04:32:08 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 22 giờ cần phòng thì ib mình nha 
+2026-11-07 04:32:08 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 04:32:08 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 04:32:08 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 04:32:08 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 04:32:08 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 04:32:08 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 04:32:08 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 04:32:08 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 20 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 04:32:08 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 04:32:08 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 04:32:08 [INFO] [Cycle 2] Hoàn thành 218s | 0 bài mới | 0 match | Nghỉ 382s
+2026-11-07 04:38:30 [INFO] 
+[Cycle 3] Bắt đầu...
+2026-11-07 04:42:06 [INFO] [Batch 1] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 04:42:06 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 04:42:06 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 04:42:06 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 04:42:06 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 04:42:06 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 04:42:06 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 04:42:06 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 7 giờ Tháng 12 vào ở 
+2026-11-07 04:42:06 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 22 giờ cần phòng thì ib mình nha 
+2026-11-07 04:42:06 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 04:42:06 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 04:42:06 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 04:42:06 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 04:42:06 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 04:42:06 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 04:42:06 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 20 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 04:42:06 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 04:42:06 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 04:42:06 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 04:42:06 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 04:42:06 [INFO] [Cycle 3] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 04:48:30 [INFO] 
+[Cycle 4] Bắt đầu...
+2026-11-07 04:51:59 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 04:51:59 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 04:51:59 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 04:51:59 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 04:51:59 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 04:51:59 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 04:51:59 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 04:51:59 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 04:51:59 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 23 giờ cần phòng thì ib mình nha 
+2026-11-07 04:51:59 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 04:51:59 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 04:51:59 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 04:51:59 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 04:51:59 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 04:51:59 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 04:51:59 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 04:51:59 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 20 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 04:51:59 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 04:51:59 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 04:51:59 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 04:51:59 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 04:51:59 [INFO] [Cycle 4] Hoàn thành 208s | 0 bài mới | 0 match | Nghỉ 392s
+2026-11-07 04:58:30 [INFO] 
+[Cycle 5] Bắt đầu...
+2026-11-07 05:02:00 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 05:02:00 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 05:02:00 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 05:02:00 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 05:02:00 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 05:02:00 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 05:02:00 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 05:02:00 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 05:02:00 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 23 giờ cần phòng thì ib mình nha 
+2026-11-07 05:02:00 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 05:02:00 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:02:00 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 05:02:00 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 05:02:00 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 05:02:00 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 05:02:00 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 05:02:00 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 21 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 05:02:00 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 05:02:00 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:02:00 [INFO] [Cycle 5] Hoàn thành 210s | 0 bài mới | 0 match | Nghỉ 390s
+2026-11-07 05:08:30 [INFO] 
+[Cycle 6] Bắt đầu...
+2026-11-07 05:12:03 [INFO] [Batch 1] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 05:12:03 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 05:12:03 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 05:12:03 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 05:12:03 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 05:12:03 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 05:12:03 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 05:12:03 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 7 giờ Tháng 12 vào ở 
+2026-11-07 05:12:03 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 23 giờ cần phòng thì ib mình nha 
+2026-11-07 05:12:03 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:12:03 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 05:12:03 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 05:12:03 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 05:12:03 [INFO] ⚠️ Missed long post | len=70 | score=0 | reason=no_transfer_keyword | preview=MemorablePeacock4207 · 7 giờ Ý là đang cần bạn làm full các mgayf đó ạ
+2026-11-07 05:12:03 [DEBUG] ❌ Filtered | post=4339284626207353 | reason=no_transfer_keyword | score=0
+2026-11-07 05:12:03 [INFO] ⚠️ Missed long post | len=66 | score=0 | reason=no_transfer_keyword | preview=SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin nghỉ thứ 3 đc ko ạ
+2026-11-07 05:12:03 [DEBUG] ❌ Filtered | post=4339218759547273 | reason=no_transfer_keyword | score=0
+2026-11-07 05:12:03 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 05:12:03 [INFO] ⚠️ Missed long post | len=100 | score=0 | reason=no_transfer_keyword | preview=MotivatedPomelo253 · 2 ngày · ôi quản trị viên duyệt bài muộn quá nên chủ lỡ hẹn
+2026-11-07 05:12:03 [DEBUG] ❌ Filtered | post=4333163973486085 | reason=no_transfer_keyword | score=0
+2026-11-07 05:12:03 [INFO] ⚠️ Missed long post | len=42 | score=0 | reason=no_transfer_keyword | preview=Hêhhee_9892 · 1 ngày Làm hol hay bếp vậy b
+2026-11-07 05:12:03 [DEBUG] ❌ Filtered | post=4335461499922999 | reason=no_transfer_keyword | score=0
+2026-11-07 05:12:03 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 21 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 05:12:03 [INFO] [Batch 2] Xong: 4 bài mới, 0 match/gửi Telegram
+2026-11-07 05:12:03 [INFO] [Cycle 6] Hoàn thành 213s | 4 bài mới | 0 match | Nghỉ 387s
+2026-11-07 05:18:30 [INFO] 
+[Cycle 7] Bắt đầu...
+2026-11-07 05:22:07 [INFO] [Batch 1] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 05:22:07 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 05:22:07 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 05:22:07 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 18 giờ 01096511402 ib mình
+2026-11-07 05:22:07 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 05:22:07 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 05:22:07 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 05:22:08 [ERROR] Telegram HTTP error: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot9242557548:AAHm1G/sendMessage | body: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-11-07 05:22:08 [INFO] Telegram sent | post=4541697949492530 | confidence=high | score=6 | keywords=['cọc', 'cọc 3tr', 'tháng']
+2026-11-07 05:22:08 [INFO] ✅ Notified | post=4541697949492530 | conf=high | score=6 | kw=['cọc', 'cọc 3tr', 'tháng']
+2026-11-07 05:22:08 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 15 giờ E lên gr trường gacho
+2026-11-07 05:22:08 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 05:22:08 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 15 giờ Cần tìm ng ở ghép k
+2026-11-07 05:22:08 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 8 giờ Tháng 12 vào ở 
+2026-11-07 05:22:08 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 23 giờ cần phòng thì ib mình nha 
+2026-11-07 05:22:08 [INFO] [Batch 1] Xong: 1 bài mới, 1 match/gửi Telegram
+2026-11-07 05:22:08 [INFO] [Batch 2] 7 bài thu được — bắt đầu xử lý...
+2026-11-07 05:22:08 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 05:22:09 [ERROR] Telegram HTTP error: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot9242557548:AAHm1G/sendMessage | body: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-11-07 05:22:09 [INFO] Telegram sent | post=2908664386184768 | confidence=high | score=24 | keywords=['nhượng', 'nhượng nhà', 'mình nhượng', 'ở ga', '2룸', 'tháng', 'nhà 2룸', '어린이대공원', 'transfer_phrase']
+2026-11-07 05:22:09 [INFO] ✅ Notified | post=2908664386184768 | conf=high | score=24 | kw=['nhượng', 'nhượng nhà', 'mình nhượng', 'ở ga', '2룸', 'tháng', 'nhà 2룸', '어린이대공원', 'transfer_phrase']
+2026-11-07 05:22:09 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 05:22:09 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 05:22:09 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 05:22:09 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 21 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 05:22:09 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 05:22:09 [INFO] [Batch 2] Xong: 1 bài mới, 1 match/gửi Telegram
+2026-11-07 05:22:09 [INFO] [Cycle 7] Hoàn thành 218s | 2 bài mới | 2 match | Nghỉ 382s
+2026-11-07 05:28:30 [INFO] 
+[Cycle 8] Bắt đầu...
+2026-11-07 05:31:59 [INFO] [Batch 1] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 05:31:59 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 05:31:59 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 05:31:59 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 05:31:59 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 05:31:59 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 05:31:59 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 05:31:59 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 8 giờ Tháng 12 vào ở 
+2026-11-07 05:31:59 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 23 giờ cần phòng thì ib mình nha 
+2026-11-07 05:31:59 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:31:59 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 05:31:59 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 05:31:59 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 05:31:59 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 05:31:59 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 05:31:59 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 21 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 05:31:59 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 05:31:59 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:31:59 [INFO] [Cycle 8] Hoàn thành 208s | 0 bài mới | 0 match | Nghỉ 392s
+2026-11-07 05:38:30 [INFO] 
+[Cycle 9] Bắt đầu...
+2026-11-07 05:42:06 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 05:42:06 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 05:42:06 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 05:42:06 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 05:42:06 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 05:42:06 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 05:42:06 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 05:42:06 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 05:42:06 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 23 giờ cần phòng thì ib mình nha 
+2026-11-07 05:42:06 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 05:42:06 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:42:06 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 05:42:06 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 05:42:06 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 05:42:06 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 05:42:06 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 05:42:06 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 21 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 05:42:06 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 05:42:06 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 05:42:06 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 05:42:06 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:42:06 [INFO] [Cycle 9] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 05:48:30 [INFO] 
+[Cycle 10] Bắt đầu...
+2026-11-07 05:52:01 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 05:52:01 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 05:52:01 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 05:52:01 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 05:52:01 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 05:52:01 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 05:52:01 [DEBUG] skip exists | 4541198879542437 | Phạm T. Hương · 1 ngày · Mọi người ơi ib em ạ. Em 
+2026-11-07 05:52:01 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 05:52:01 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 05:52:01 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 05:52:01 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 05:52:01 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 05:52:01 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:52:01 [INFO] [Batch 2] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 05:52:01 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 05:52:01 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 05:52:01 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 05:52:01 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 05:52:01 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 05:52:01 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 21 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 05:52:01 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 05:52:01 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 05:52:01 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 05:52:01 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 05:52:01 [INFO] [Cycle 10] Hoàn thành 210s | 0 bài mới | 0 match | Nghỉ 390s
+2026-11-07 05:58:30 [INFO] 
+[Cycle 11] Bắt đầu...
+2026-11-07 06:02:06 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 06:02:06 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 06:02:06 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 06:02:06 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 06:02:06 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 06:02:06 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 06:02:06 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 06:02:06 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 06:02:06 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 06:02:06 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 06:02:06 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:02:06 [INFO] [Batch 2] 7 bài thu được — bắt đầu xử lý...
+2026-11-07 06:02:06 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 06:02:06 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 06:02:06 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 06:02:06 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 06:02:06 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 06:02:06 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 22 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 06:02:06 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 06:02:06 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:02:06 [INFO] [Cycle 11] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 06:08:30 [INFO] 
+[Cycle 12] Bắt đầu...
+2026-11-07 06:12:01 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 06:12:01 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 06:12:01 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 06:12:01 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 06:12:01 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 06:12:01 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 06:12:01 [DEBUG] skip exists | 4541198879542437 | Phạm T. Hương · 1 ngày · Mọi người ơi ib em ạ. Em 
+2026-11-07 06:12:01 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 06:12:01 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 06:12:01 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 06:12:01 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 06:12:01 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 06:12:01 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:12:01 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 06:12:01 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 06:12:01 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 06:12:01 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 06:12:01 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 06:12:01 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 22 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 06:12:01 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 06:12:01 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:12:01 [INFO] [Cycle 12] Hoàn thành 211s | 0 bài mới | 0 match | Nghỉ 389s
+2026-11-07 06:18:30 [INFO] 
+[Cycle 13] Bắt đầu...
+2026-11-07 06:22:05 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 06:22:05 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 06:22:05 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 06:22:05 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 06:22:05 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 06:22:05 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 06:22:05 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 16 giờ Cần tìm ng ở ghép k
+2026-11-07 06:22:05 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 06:22:05 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 06:22:05 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 06:22:05 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:22:05 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 06:22:05 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 06:22:05 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 3 ngày Đệm bao nhiêu v ạ
+2026-11-07 06:22:05 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 06:22:05 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 06:22:05 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 22 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 06:22:05 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 06:22:05 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 06:22:05 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 06:22:05 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:22:05 [INFO] [Cycle 13] Hoàn thành 214s | 0 bài mới | 0 match | Nghỉ 386s
+2026-11-07 06:28:30 [INFO] 
+[Cycle 14] Bắt đầu...
+2026-11-07 06:31:58 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 06:31:58 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 06:31:58 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 06:31:58 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 06:31:58 [DEBUG] skip exists | 1137822875878002 | Chuyển Nhà Seoul · 13 giờ · Quản trị viên....
+2026-11-07 06:31:58 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 06:31:58 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 06:31:58 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 06:31:58 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 06:31:58 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 06:31:58 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 06:31:58 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:31:58 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 06:31:58 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 06:31:58 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 06:31:58 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 06:31:58 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 06:31:58 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 06:31:58 [DEBUG] skip exists | 4338196996316116 | Vũ Lan Hương · 15 giờ · Ib mình tư vấn cho ạ 01021
+2026-11-07 06:31:58 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 06:31:58 [DEBUG] skip exists | 4337697803032702 | ChummyQuince6392 · 1 ngày · 100% là làm với người 
+2026-11-07 06:31:58 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:31:58 [INFO] [Cycle 14] Hoàn thành 208s | 0 bài mới | 0 match | Nghỉ 392s
+2026-11-07 06:38:30 [INFO] 
+[Cycle 15] Bắt đầu...
+2026-11-07 06:42:04 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 06:42:04 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 06:42:04 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 06:42:04 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 06:42:04 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 06:42:04 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 06:42:04 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 06:42:04 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 06:42:04 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 06:42:04 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 06:42:04 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 06:42:04 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:42:04 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 06:42:04 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 06:42:04 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 06:42:04 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 06:42:04 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 06:42:04 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 22 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 06:42:04 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 06:42:04 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 06:42:04 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 06:42:04 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:42:04 [INFO] [Cycle 15] Hoàn thành 214s | 0 bài mới | 0 match | Nghỉ 386s
+2026-11-07 06:48:30 [INFO] 
+[Cycle 16] Bắt đầu...
+2026-11-07 06:51:58 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 06:51:58 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 06:51:58 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 06:51:58 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 06:51:58 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 06:51:58 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 06:51:58 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 06:51:58 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 06:51:58 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 06:51:58 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 06:51:58 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:51:58 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 06:51:58 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 06:51:58 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 06:51:58 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 06:51:58 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 06:51:58 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 22 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 06:51:58 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 06:51:58 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 06:51:58 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 06:51:58 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 06:51:58 [INFO] [Cycle 16] Hoàn thành 208s | 0 bài mới | 0 match | Nghỉ 392s
+2026-11-07 06:58:30 [INFO] 
+[Cycle 17] Bắt đầu...
+2026-11-07 07:02:10 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 07:02:10 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 07:02:10 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 07:02:10 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 07:02:10 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 07:02:10 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 07:02:10 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 07:02:10 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 07:02:10 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 07:02:10 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 07:02:10 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:02:10 [INFO] [Batch 2] 7 bài thu được — bắt đầu xử lý...
+2026-11-07 07:02:10 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 07:02:10 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 07:02:10 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 07:02:10 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 07:02:10 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 07:02:10 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 23 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 07:02:10 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 07:02:10 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:02:10 [INFO] [Cycle 17] Hoàn thành 219s | 0 bài mới | 0 match | Nghỉ 381s
+2026-11-07 07:08:30 [INFO] 
+[Cycle 18] Bắt đầu...
+2026-11-07 07:12:04 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 07:12:04 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 07:12:04 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 07:12:04 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 07:12:04 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 07:12:04 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 07:12:04 [DEBUG] skip exists | 4541198879542437 | Phạm T. Hương · 1 ngày · Mọi người ơi ib em ạ. Em 
+2026-11-07 07:12:04 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 07:12:04 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 07:12:04 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 07:12:04 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 07:12:04 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 07:12:04 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:12:04 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 07:12:04 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 07:12:04 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 07:12:04 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 07:12:04 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 07:12:04 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 07:12:04 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 23 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 07:12:04 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 07:12:04 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 07:12:04 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:12:04 [INFO] [Cycle 18] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 07:18:30 [INFO] 
+[Cycle 19] Bắt đầu...
+2026-11-07 07:22:02 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 07:22:02 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 07:22:02 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 07:22:02 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 07:22:02 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 07:22:02 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 07:22:02 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 07:22:02 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 17 giờ Cần tìm ng ở ghép k
+2026-11-07 07:22:02 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 07:22:02 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 07:22:02 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 07:22:02 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:22:02 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 07:22:02 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 07:22:02 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 07:22:02 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 07:22:02 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 07:22:02 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 23 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 07:22:02 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 07:22:02 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:22:02 [INFO] [Cycle 19] Hoàn thành 212s | 0 bài mới | 0 match | Nghỉ 388s
+2026-11-07 07:28:30 [INFO] 
+[Cycle 20] Bắt đầu...
+2026-11-07 07:32:12 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 07:32:12 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 07:32:12 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 07:32:12 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 07:32:12 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 07:32:12 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 07:32:12 [DEBUG] skip exists | 4541198879542437 | Phạm T. Hương · 1 ngày · Mọi người ơi ib em ạ. Em 
+2026-11-07 07:32:12 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 07:32:12 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 07:32:12 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 07:32:12 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 07:32:12 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 07:32:12 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:32:12 [INFO] [Batch 2] 7 bài thu được — bắt đầu xử lý...
+2026-11-07 07:32:12 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 07:32:12 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 07:32:12 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 07:32:12 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 07:32:12 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 07:32:12 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 23 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 07:32:12 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 07:32:12 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:32:12 [INFO] [Cycle 20] Hoàn thành 221s | 0 bài mới | 0 match | Nghỉ 379s
+2026-11-07 07:38:30 [INFO] 
+[Cycle 21] Bắt đầu...
+2026-11-07 07:42:12 [INFO] [Batch 1] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 07:42:12 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 07:42:12 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 07:42:12 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 07:42:12 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 07:42:12 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 07:42:12 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 07:42:12 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 10 giờ Tháng 12 vào ở
+2026-11-07 07:42:12 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 07:42:12 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:42:12 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 07:42:12 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 07:42:12 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 07:42:12 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 07:42:12 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 07:42:12 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 23 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 07:42:12 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 07:42:12 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:42:12 [INFO] [Cycle 21] Hoàn thành 222s | 0 bài mới | 0 match | Nghỉ 378s
+2026-11-07 07:48:31 [INFO] 
+[Cycle 22] Bắt đầu...
+2026-11-07 07:52:11 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 07:52:11 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 07:52:11 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 07:52:11 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 07:52:11 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 07:52:11 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 07:52:11 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 07:52:11 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 07:52:11 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 07:52:11 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 07:52:11 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:52:11 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 07:52:11 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 07:52:11 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 07:52:11 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 07:52:11 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 07:52:11 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 23 giờ TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 07:52:11 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 07:52:11 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 07:52:11 [INFO] [Cycle 22] Hoàn thành 220s | 0 bài mới | 0 match | Nghỉ 380s
+2026-11-07 07:58:31 [INFO] 
+[Cycle 23] Bắt đầu...
+2026-11-07 08:02:11 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 08:02:11 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 08:02:11 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 08:02:11 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 08:02:11 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 22 giờ Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 08:02:11 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 18 giờ E lên gr trường gacho
+2026-11-07 08:02:11 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 08:02:11 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 08:02:11 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 08:02:11 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 10 giờ Tháng 12 vào ở
+2026-11-07 08:02:11 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 08:02:11 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:02:11 [INFO] [Batch 2] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 08:02:11 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 08:02:11 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 08:02:11 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 08:02:11 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 9 giờ Ý là đang cần bạn làm
+2026-11-07 08:02:11 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 08:02:11 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 08:02:11 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 08:02:11 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 1 ngày Làm hol hay bếp vậy b
+2026-11-07 08:02:11 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 08:02:11 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:02:11 [INFO] [Cycle 23] Hoàn thành 221s | 0 bài mới | 0 match | Nghỉ 379s
+2026-11-07 08:08:31 [INFO] 
+[Cycle 24] Bắt đầu...
+2026-11-07 08:12:10 [INFO] [Batch 1] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 08:12:10 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 08:12:10 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 08:12:10 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 08:12:10 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 08:12:10 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 08:12:10 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 08:12:10 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 10 giờ Tháng 12 vào ở
+2026-11-07 08:12:10 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 08:12:10 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:12:10 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 08:12:10 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 08:12:10 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 08:12:10 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 08:12:10 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 08:12:10 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 08:12:10 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 08:12:10 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 08:12:10 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 08:12:10 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:12:10 [INFO] [Cycle 24] Hoàn thành 220s | 0 bài mới | 0 match | Nghỉ 380s
+2026-11-07 08:18:31 [INFO] 
+[Cycle 25] Bắt đầu...
+2026-11-07 08:22:06 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 08:22:06 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 08:22:06 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 08:22:06 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 08:22:06 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 08:22:06 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 08:22:06 [DEBUG] skip exists | 4541198879542437 | Phạm T. Hương · 1 ngày · Mọi người ơi ib em ạ. Em 
+2026-11-07 08:22:06 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 08:22:06 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 18 giờ Cần tìm ng ở ghép k
+2026-11-07 08:22:06 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 08:22:06 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 08:22:06 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 08:22:06 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:22:06 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 08:22:06 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 08:22:06 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 08:22:06 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 08:22:06 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 08:22:06 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 08:22:06 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 08:22:06 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 08:22:06 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 08:22:06 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:22:06 [INFO] [Cycle 25] Hoàn thành 215s | 0 bài mới | 0 match | Nghỉ 385s
+2026-11-07 08:28:31 [INFO] 
+[Cycle 26] Bắt đầu...
+2026-11-07 08:32:06 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 08:32:06 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 08:32:06 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 08:32:06 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 08:32:06 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 08:32:06 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 08:32:06 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 08:32:06 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 08:32:06 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 08:32:06 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 08:32:06 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 08:32:06 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:32:06 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 08:32:06 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 08:32:06 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 08:32:06 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 08:32:06 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 08:32:06 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 08:32:06 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 08:32:06 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:32:06 [INFO] [Cycle 26] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 08:38:31 [INFO] 
+[Cycle 27] Bắt đầu...
+2026-11-07 08:42:02 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 08:42:02 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 08:42:02 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 08:42:02 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 08:42:02 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 08:42:02 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 08:42:02 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 08:42:02 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 08:42:02 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 08:42:02 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 08:42:02 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 08:42:02 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:42:02 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 08:42:02 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 08:42:02 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 08:42:02 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 08:42:02 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 08:42:02 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 08:42:02 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 08:42:02 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 08:42:02 [DEBUG] skip exists | 4337766493025833 | CheerfulElk3169 · 1 ngàyQuán có yêu cầu kn, đklt k
+2026-11-07 08:42:02 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:42:02 [INFO] [Cycle 27] Hoàn thành 211s | 0 bài mới | 0 match | Nghỉ 389s
+2026-11-07 08:48:31 [INFO] 
+[Cycle 28] Bắt đầu...
+2026-11-07 08:52:03 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 08:52:03 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 08:52:03 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 08:52:03 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 08:52:03 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 08:52:03 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 08:52:03 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 08:52:03 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 08:52:03 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 08:52:03 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 08:52:03 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:52:03 [INFO] [Batch 2] 7 bài thu được — bắt đầu xử lý...
+2026-11-07 08:52:03 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 08:52:03 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 08:52:03 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 08:52:03 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 08:52:03 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 08:52:03 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 08:52:03 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 1 ngày Quán ở đâu z ạ
+2026-11-07 08:52:03 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 08:52:03 [INFO] [Cycle 28] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 09:02:42 [INFO] ============================================================
+2026-11-07 09:02:42 [INFO] Facebook Housing Monitor AUTO — BATCH MODE
+2026-11-07 09:02:42 [INFO] Interval: 600s | Batch pause: 60s | Filter: STRICT v3
+2026-11-07 09:02:42 [INFO] ============================================================
+2026-11-07 09:02:42 [INFO] 
+[Cycle 1] Bắt đầu...
+2026-11-07 09:06:26 [INFO] [Batch 1] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 09:06:26 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 09:06:26 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 09:06:26 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 09:06:26 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 09:06:26 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 09:06:26 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 09:06:26 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 11 giờ Tháng 12 vào ở
+2026-11-07 09:06:26 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 09:06:26 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:06:26 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 09:06:26 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 09:06:26 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 09:06:26 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 09:06:26 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 09:06:26 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 09:06:26 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 2 ngày Quán ở đâu z ạ
+2026-11-07 09:06:26 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:06:26 [INFO] [Cycle 1] Hoàn thành 223s | 0 bài mới | 0 match | Nghỉ 377s
+2026-11-07 09:12:42 [INFO] 
+[Cycle 2] Bắt đầu...
+2026-11-07 09:16:15 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 09:16:15 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 09:16:15 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 09:16:15 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 09:16:15 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 09:16:15 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 09:16:15 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 09:16:15 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 09:16:15 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 12 giờ Tháng 12 vào ở
+2026-11-07 09:16:15 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 09:16:15 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:16:15 [INFO] [Batch 2] 6 bài thu được — bắt đầu xử lý...
+2026-11-07 09:16:15 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 09:16:15 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 09:16:15 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 09:16:15 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 09:16:15 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 09:16:15 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 2 ngày Quán ở đâu z ạ
+2026-11-07 09:16:15 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:16:15 [INFO] [Cycle 2] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 09:22:42 [INFO] 
+[Cycle 3] Bắt đầu...
+2026-11-07 09:26:14 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 09:26:14 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 09:26:14 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 09:26:14 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 09:26:14 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 09:26:14 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 09:26:14 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 19 giờ Cần tìm ng ở ghép k
+2026-11-07 09:26:14 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 09:26:14 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 12 giờ Tháng 12 vào ở
+2026-11-07 09:26:14 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 09:26:14 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:26:14 [INFO] [Batch 2] 7 bài thu được — bắt đầu xử lý...
+2026-11-07 09:26:14 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 09:26:14 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 09:26:14 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 09:26:14 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 09:26:14 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 09:26:14 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 2 ngày Quán ở đâu z ạ
+2026-11-07 09:26:14 [DEBUG] skip exists | 4337779686357847 | Chuột Cry · 2 ngày · Quán 칼국수 ở 전남광주 cần tìm 2 bạn
+2026-11-07 09:26:14 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:26:14 [INFO] [Cycle 3] Hoàn thành 212s | 0 bài mới | 0 match | Nghỉ 388s
+2026-11-07 09:32:42 [INFO] 
+[Cycle 4] Bắt đầu...
+2026-11-07 09:36:17 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 09:36:17 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 09:36:17 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 09:36:17 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 09:36:17 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 09:36:17 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 09:36:17 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 09:36:17 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 09:36:17 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 09:36:17 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 09:36:17 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 09:36:17 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:36:17 [INFO] [Batch 2] 7 bài thu được — bắt đầu xử lý...
+2026-11-07 09:36:17 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 09:36:17 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 09:36:17 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 09:36:17 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 09:36:17 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 1 ngày Làm hol hay bếp vậy b
+2026-11-07 09:36:17 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 09:36:17 [DEBUG] skip exists | 4337625566373259 | SunnyHeron7041 · 2 ngàyQuán ở đâu z ạ
+2026-11-07 09:36:17 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:36:17 [INFO] [Cycle 4] Hoàn thành 215s | 0 bài mới | 0 match | Nghỉ 385s
+2026-11-07 09:42:42 [INFO] 
+[Cycle 5] Bắt đầu...
+2026-11-07 09:46:15 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 09:46:15 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 09:46:15 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 09:46:15 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 09:46:15 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 09:46:15 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 09:46:15 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 09:46:15 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 09:46:15 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 09:46:15 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 09:46:15 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 09:46:15 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 09:46:15 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:46:15 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 09:46:15 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 09:46:15 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 09:46:15 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 09:46:15 [INFO] ⚠️ Missed long post | len=108 | score=0 | reason=no_transfer_keyword | preview=Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối không ạ. Vào kỷ nghỉ em có thể là
+2026-11-07 09:46:15 [DEBUG] ❌ Filtered | post=4339319022870580 | reason=no_transfer_keyword | score=0
+2026-11-07 09:46:15 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 11 giờ Ý là đang cần bạn là
+2026-11-07 09:46:15 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 09:46:15 [INFO] ⚠️ Missed long post | len=88 | score=0 | reason=no_transfer_keyword | preview=Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma vào cmt thì đ thấy gì:)) tus 
+2026-11-07 09:46:15 [DEBUG] ❌ Filtered | post=4330929627042853 | reason=no_transfer_keyword | score=0
+2026-11-07 09:46:15 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 09:46:15 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 09:46:15 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 09:46:15 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 1 ngày Làm hol hay bếp vậy b
+2026-11-07 09:46:15 [INFO] [Batch 2] Xong: 2 bài mới, 0 match/gửi Telegram
+2026-11-07 09:46:15 [INFO] [Cycle 5] Hoàn thành 213s | 2 bài mới | 0 match | Nghỉ 387s
+2026-11-07 09:52:42 [INFO] 
+[Cycle 6] Bắt đầu...
+2026-11-07 09:56:23 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 09:56:23 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 09:56:23 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 09:56:23 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 09:56:23 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 09:56:23 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 23 giờ Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 09:56:23 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 20 giờ E lên gr trường gacho
+2026-11-07 09:56:23 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 09:56:23 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 09:56:23 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 09:56:23 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 12 giờ Tháng 12 vào ở
+2026-11-07 09:56:23 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 09:56:23 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:56:23 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 09:56:23 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 09:56:23 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 09:56:23 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 09:56:23 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 09:56:23 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 11 giờ Ý là đang cần bạn là
+2026-11-07 09:56:23 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 09:56:23 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 09:56:23 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 09:56:23 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 09:56:23 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 09:56:23 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 1 ngày Làm hol hay bếp vậy b
+2026-11-07 09:56:23 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 09:56:23 [INFO] [Cycle 6] Hoàn thành 221s | 0 bài mới | 0 match | Nghỉ 379s
+2026-11-07 10:02:42 [INFO] 
+[Cycle 7] Bắt đầu...
+2026-11-07 10:06:16 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:06:16 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 10:06:16 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 10:06:16 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 10:06:16 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 10:06:16 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 10:06:16 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 10:06:16 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 10:06:16 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 10:06:16 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 10:06:16 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 10:06:16 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:06:16 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 10:06:16 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 10:06:16 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 10:06:16 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 10:06:16 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 11 giờ Ý là đang cần bạn là
+2026-11-07 10:06:16 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 10:06:16 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 10:06:16 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 10:06:16 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 10:06:16 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:06:16 [INFO] [Cycle 7] Hoàn thành 214s | 0 bài mới | 0 match | Nghỉ 386s
+2026-11-07 10:12:42 [INFO] 
+[Cycle 8] Bắt đầu...
+2026-11-07 10:16:19 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:16:19 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 10:16:19 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 10:16:19 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 10:16:19 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 10:16:19 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 10:16:19 [DEBUG] skip exists | 4541456306183361 | La Rose · 1 ngày Hi ban gửi hình mình xem vơi nha
+2026-11-07 10:16:19 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 10:16:19 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 10:16:19 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 13 giờ Tháng 12 vào ở
+2026-11-07 10:16:19 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 10:16:19 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:16:19 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 10:16:19 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 10:16:19 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 10:16:19 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 10:16:19 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 12 giờ Ý là đang cần bạn là
+2026-11-07 10:16:19 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 10:16:19 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 10:16:19 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 10:16:19 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 10:16:19 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:16:19 [INFO] [Cycle 8] Hoàn thành 217s | 0 bài mới | 0 match | Nghỉ 383s
+2026-11-07 10:22:42 [INFO] 
+[Cycle 9] Bắt đầu...
+2026-11-07 10:26:16 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:26:16 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 10:26:16 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 10:26:16 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 10:26:16 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 10:26:16 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 10:26:16 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 20 giờ Cần tìm ng ở ghép k
+2026-11-07 10:26:16 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 10:26:16 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 10:26:16 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 10:26:16 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 10:26:16 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:26:16 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 10:26:16 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 10:26:16 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 10:26:16 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 10:26:16 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 12 giờ Ý là đang cần bạn là
+2026-11-07 10:26:16 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 10:26:16 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 10:26:16 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 10:26:16 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 10:26:16 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:26:16 [INFO] [Cycle 9] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 10:32:42 [INFO] 
+[Cycle 10] Bắt đầu...
+2026-11-07 10:36:14 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 10:36:14 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 10:36:14 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 10:36:14 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 10:36:14 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 10:36:14 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 10:36:14 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 10:36:14 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 10:36:14 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 13 giờ Tháng 12 vào ở
+2026-11-07 10:36:14 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 10:36:14 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:36:14 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:36:14 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 10:36:14 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 10:36:14 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 10:36:14 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 12 giờ Ý là đang cần bạn là
+2026-11-07 10:36:14 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 10:36:14 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 10:36:14 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 10:36:14 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 10:36:14 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 10:36:14 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 10:36:14 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:36:14 [INFO] [Cycle 10] Hoàn thành 212s | 0 bài mới | 0 match | Nghỉ 388s
+2026-11-07 10:42:42 [INFO] 
+[Cycle 11] Bắt đầu...
+2026-11-07 10:46:19 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:46:19 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 10:46:19 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 10:46:19 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 10:46:19 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 10:46:19 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 10:46:19 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 10:46:19 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 10:46:19 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 10:46:19 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 10:46:19 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 10:46:19 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:46:19 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:46:19 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 10:46:19 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 10:46:19 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 10:46:19 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 12 giờ Ý là đang cần bạn là
+2026-11-07 10:46:19 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 10:46:19 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 10:46:19 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 10:46:19 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 10:46:19 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 10:46:19 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 10:46:19 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:46:19 [INFO] [Cycle 11] Hoàn thành 217s | 0 bài mới | 0 match | Nghỉ 383s
+2026-11-07 10:52:42 [INFO] 
+[Cycle 12] Bắt đầu...
+2026-11-07 10:56:18 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:56:18 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 10:56:18 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 10:56:18 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 10:56:18 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 10:56:18 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 10:56:18 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 10:56:18 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 10:56:18 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 10:56:18 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 10:56:18 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 10:56:18 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:56:18 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 10:56:18 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 10:56:18 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 10:56:18 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 10:56:18 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 10:56:18 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 12 giờ Ý là đang cần bạn là
+2026-11-07 10:56:18 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 10:56:18 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 10:56:18 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 10:56:18 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 10:56:18 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 10:56:18 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 10:56:18 [INFO] [Cycle 12] Hoàn thành 215s | 0 bài mới | 0 match | Nghỉ 385s
+2026-11-07 11:02:42 [INFO] 
+[Cycle 13] Bắt đầu...
+2026-11-07 11:06:25 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:06:25 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 11:06:25 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 11:06:25 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 11:06:25 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 11:06:25 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 11:06:25 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 11:06:25 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 11:06:25 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 11:06:25 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 11:06:25 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 11:06:25 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:06:25 [INFO] [Batch 2] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 11:06:25 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 11:06:25 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 11:06:25 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 11:06:25 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 12 giờ Ý là đang cần bạn là
+2026-11-07 11:06:25 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 11:06:25 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 11:06:25 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 11:06:25 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 11:06:25 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 11:06:25 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:06:25 [INFO] [Cycle 13] Hoàn thành 223s | 0 bài mới | 0 match | Nghỉ 377s
+2026-11-07 11:12:42 [INFO] 
+[Cycle 14] Bắt đầu...
+2026-11-07 11:16:19 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:16:19 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 11:16:19 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 11:16:19 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 11:16:19 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 11:16:19 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 11:16:19 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 11:16:19 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 11:16:19 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 11:16:19 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 11:16:19 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 11:16:19 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:16:19 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:16:19 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 11:16:19 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 11:16:19 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 11:16:19 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 13 giờ Ý là đang cần bạn là
+2026-11-07 11:16:19 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 11:16:19 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 11:16:19 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 11:16:19 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 11:16:19 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 11:16:19 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 11:16:19 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:16:19 [INFO] [Cycle 14] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 11:22:42 [INFO] 
+[Cycle 15] Bắt đầu...
+2026-11-07 11:26:16 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:26:16 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 11:26:16 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 11:26:16 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 11:26:16 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 11:26:16 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 11:26:16 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 21 giờ Cần tìm ng ở ghép k
+2026-11-07 11:26:16 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 11:26:16 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 11:26:16 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 11:26:16 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 11:26:16 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:26:16 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 11:26:16 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 11:26:16 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 11:26:16 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 11:26:16 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 11:26:16 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 13 giờ Ý là đang cần bạn là
+2026-11-07 11:26:16 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 11:26:16 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 11:26:16 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 11:26:16 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 11:26:16 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 11:26:16 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 11:26:16 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:26:16 [INFO] [Cycle 15] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 11:32:42 [INFO] 
+[Cycle 16] Bắt đầu...
+2026-11-07 11:36:22 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:36:22 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 11:36:22 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 11:36:22 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 11:36:22 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 11:36:22 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 11:36:22 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 11:36:22 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 11:36:22 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 11:36:22 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 14 giờ Tháng 12 vào ở
+2026-11-07 11:36:22 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 11:36:22 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:36:22 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:36:22 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 11:36:22 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 11:36:22 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 11:36:22 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 13 giờ Ý là đang cần bạn là
+2026-11-07 11:36:22 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 11:36:22 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 11:36:22 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 11:36:22 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 11:36:22 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 11:36:22 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 11:36:22 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:36:22 [INFO] [Cycle 16] Hoàn thành 219s | 0 bài mới | 0 match | Nghỉ 381s
+2026-11-07 11:42:42 [INFO] 
+[Cycle 17] Bắt đầu...
+2026-11-07 11:46:19 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:46:19 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 11:46:19 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 11:46:19 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 11:46:19 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 11:46:19 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 11:46:19 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 11:46:19 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 11:46:19 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 11:46:19 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 14 giờ Tháng 12 vào ở
+2026-11-07 11:46:19 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 11:46:19 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:46:19 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:46:19 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 11:46:19 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 11:46:19 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 11:46:19 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 13 giờ Ý là đang cần bạn là
+2026-11-07 11:46:19 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 11:46:19 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 11:46:19 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 11:46:19 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 11:46:19 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 11:46:19 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 11:46:19 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:46:19 [INFO] [Cycle 17] Hoàn thành 217s | 0 bài mới | 0 match | Nghỉ 383s
+2026-11-07 11:52:42 [INFO] 
+[Cycle 18] Bắt đầu...
+2026-11-07 11:56:16 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 11:56:16 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 11:56:16 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 11:56:16 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 11:56:16 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 11:56:16 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngày C thử ra bđs tìm xem
+2026-11-07 11:56:16 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 11:56:16 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 11:56:16 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 11:56:16 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 11:56:16 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 11:56:16 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 11:56:16 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:56:16 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 11:56:16 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 11:56:16 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 11:56:16 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 11:56:16 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 13 giờ Ý là đang cần bạn là
+2026-11-07 11:56:16 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 11:56:16 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 11:56:16 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 11:56:16 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 11:56:16 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 11:56:16 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 11:56:16 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 11:56:16 [INFO] [Cycle 18] Hoàn thành 214s | 0 bài mới | 0 match | Nghỉ 386s
+2026-11-07 12:02:42 [INFO] 
+[Cycle 19] Bắt đầu...
+2026-11-07 12:06:23 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 12:06:23 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 12:06:23 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 12:06:23 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 12:06:23 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 12:06:23 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 12:06:23 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 22 giờ E lên gr trường gacho
+2026-11-07 12:06:23 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 12:06:23 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 12:06:23 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 12:06:23 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 14 giờ Tháng 12 vào ở
+2026-11-07 12:06:23 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 12:06:23 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:06:23 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 12:06:23 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 12:06:23 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 12:06:23 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 12:06:23 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 13 giờ Ý là đang cần bạn là
+2026-11-07 12:06:23 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 12:06:23 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 12:06:23 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 12:06:23 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 12:06:23 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 12:06:23 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 12:06:23 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:06:23 [INFO] [Cycle 19] Hoàn thành 221s | 0 bài mới | 0 match | Nghỉ 379s
+2026-11-07 12:12:42 [INFO] 
+[Cycle 20] Bắt đầu...
+2026-11-07 12:16:09 [INFO] [Batch 1] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 12:16:09 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 12:16:09 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 12:16:09 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 12:16:09 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 12:16:09 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 12:16:09 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 22 giờ E lên gr trường gacho
+2026-11-07 12:16:09 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 12:16:09 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 12:16:09 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 12:16:09 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 12:16:09 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 12:16:09 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 12:16:09 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:16:09 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 12:16:09 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 12:16:09 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 12:16:09 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 12:16:09 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 12:16:09 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 14 giờ Ý là đang cần bạn là
+2026-11-07 12:16:09 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 12:16:09 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 12:16:09 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 12:16:10 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 12:16:10 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 12:16:10 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 12:16:10 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:16:10 [INFO] [Cycle 20] Hoàn thành 207s | 0 bài mới | 0 match | Nghỉ 393s
+2026-11-07 12:22:42 [INFO] 
+[Cycle 21] Bắt đầu...
+2026-11-07 12:26:22 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 12:26:22 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 12:26:22 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 12:26:22 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 12:26:22 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 12:26:22 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 12:26:22 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 12:26:22 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 22 giờ Cần tìm ng ở ghép k
+2026-11-07 12:26:22 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 12:26:22 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 12:26:22 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 12:26:22 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 12:26:22 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:26:22 [INFO] [Batch 2] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 12:26:22 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 12:26:22 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 12:26:22 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 12:26:22 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 14 giờ Ý là đang cần bạn là
+2026-11-07 12:26:22 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 12:26:22 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 12:26:22 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 12:26:22 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 12:26:22 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 12:26:22 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 12:26:22 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:26:22 [INFO] [Cycle 21] Hoàn thành 219s | 0 bài mới | 0 match | Nghỉ 381s
+2026-11-07 12:32:42 [INFO] 
+[Cycle 22] Bắt đầu...
+2026-11-07 12:36:11 [INFO] [Batch 1] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 12:36:11 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 12:36:11 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 12:36:11 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 12:36:11 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 12:36:11 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 12:36:11 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 23 giờ E lên gr trường gacho
+2026-11-07 12:36:11 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 12:36:11 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 12:36:11 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 12:36:11 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 12:36:11 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 12:36:11 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 12:36:11 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:36:11 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 12:36:11 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 12:36:11 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 12:36:11 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 4 ngày Lên cungpang mua xái
+2026-11-07 12:36:11 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 12:36:11 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 14 giờ Ý là đang cần bạn là
+2026-11-07 12:36:11 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 12:36:11 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 12:36:11 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 12:36:11 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 12:36:11 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 12:36:11 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 12:36:11 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:36:11 [INFO] [Cycle 22] Hoàn thành 209s | 0 bài mới | 0 match | Nghỉ 391s
+2026-11-07 12:42:42 [INFO] 
+[Cycle 23] Bắt đầu...
+2026-11-07 12:46:20 [INFO] [Batch 1] 13 bài thu được — bắt đầu xử lý...
+2026-11-07 12:46:20 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 22 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 12:46:20 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 12:46:20 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 12:46:20 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 12:46:20 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 12:46:20 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 12:46:20 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 12:46:20 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 12:46:20 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 12:46:20 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 12:46:20 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 12:46:20 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 12:46:20 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 12:46:20 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:46:20 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 12:46:20 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 12:46:20 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 12:46:20 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 12:46:20 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 12:46:20 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 14 giờ Ý là đang cần bạn là
+2026-11-07 12:46:20 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 12:46:20 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 12:46:20 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 1 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 12:46:20 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 12:46:20 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 12:46:20 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 12:46:20 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:46:20 [INFO] [Cycle 23] Hoàn thành 218s | 0 bài mới | 0 match | Nghỉ 382s
+2026-11-07 12:52:42 [INFO] 
+[Cycle 24] Bắt đầu...
+2026-11-07 12:56:16 [INFO] [Batch 1] 14 bài thu được — bắt đầu xử lý...
+2026-11-07 12:56:16 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 22 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 12:56:16 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 12:56:16 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 12:56:16 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 12:56:16 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 12:56:16 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 12:56:16 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 12:56:16 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 23 giờ E lên gr trường gacho
+2026-11-07 12:56:16 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 12:56:16 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 12:56:16 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 12:56:16 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 12:56:16 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 12:56:16 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 12:56:16 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:56:16 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 12:56:16 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 12:56:16 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 12:56:16 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 12:56:16 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 12:56:16 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 14 giờ Ý là đang cần bạn là
+2026-11-07 12:56:16 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 12:56:16 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 12:56:16 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 12:56:16 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 12:56:16 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 12:56:16 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 12:56:16 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 12:56:16 [INFO] [Cycle 24] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 13:02:42 [INFO] 
+[Cycle 25] Bắt đầu...
+2026-11-07 13:06:20 [INFO] [Batch 1] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 13:06:20 [INFO] ⚠️ Missed long post | len=45 | score=0 | reason=no_transfer_keyword | preview=NiceGuava1709 · 4 giờ Bên mình có cho gạo k c
+2026-11-07 13:06:20 [DEBUG] ❌ Filtered | post=1139511009042522 | reason=no_transfer_keyword | score=0
+2026-11-07 13:06:20 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 22 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 13:06:20 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 13:06:20 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 13:06:20 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 13:06:20 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 13:06:20 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 23 giờ E lên gr trường gacho
+2026-11-07 13:06:20 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 13:06:20 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 13:06:20 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 13:06:20 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 15 giờ Tháng 12 vào ở
+2026-11-07 13:06:20 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 13:06:20 [INFO] [Batch 1] Xong: 1 bài mới, 0 match/gửi Telegram
+2026-11-07 13:06:20 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 13:06:20 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 13:06:20 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 13:06:20 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 13:06:20 [INFO] ⚠️ Missed long post | len=83 | score=0 | reason=no_transfer_keyword | preview=DeterminedRabbit1668 · 1 ngày tiếng hàn gtiep cơ bản thôi có được ko ạ Đã chỉnh 
+2026-11-07 13:06:20 [DEBUG] ❌ Filtered | post=4339536116182204 | reason=no_transfer_keyword | score=0
+2026-11-07 13:06:20 [INFO] ⚠️ Missed long post | len=61 | score=0 | reason=no_transfer_keyword | preview=Trần Thị Hồng Yến · 1 ngày Có quan trọng giới tính không bạn?
+2026-11-07 13:06:20 [DEBUG] ❌ Filtered | post=4339411372861345 | reason=no_transfer_keyword | score=0
+2026-11-07 13:06:20 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 13:06:20 [INFO] ⚠️ Missed long post | len=46 | score=0 | reason=no_transfer_keyword | preview=ThrillingAvocado8254 · 1 ngày Nghỉ t2,4 đc k ạ
+2026-11-07 13:06:20 [DEBUG] ❌ Filtered | post=4339052539563895 | reason=no_transfer_keyword | score=0
+2026-11-07 13:06:20 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 13:06:20 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 13:06:20 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 13:06:20 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 13:06:20 [INFO] [Batch 2] Xong: 3 bài mới, 0 match/gửi Telegram
+2026-11-07 13:06:20 [INFO] [Cycle 25] Hoàn thành 217s | 4 bài mới | 0 match | Nghỉ 383s
+2026-11-07 13:12:42 [INFO] 
+[Cycle 26] Bắt đầu...
+2026-11-07 13:16:18 [INFO] [Batch 1] 14 bài thu được — bắt đầu xử lý...
+2026-11-07 13:16:18 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 22 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 13:16:18 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 13:16:18 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 13:16:18 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 13:16:18 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 13:16:18 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 13:16:18 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 13:16:18 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 23 giờ E lên gr trường gacho
+2026-11-07 13:16:18 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 13:16:18 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 13:16:18 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 13:16:18 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 13:16:18 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 13:16:18 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:16:18 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:16:18 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 13:16:18 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 13:16:18 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 13:16:18 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 13:16:18 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 13:16:18 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 15 giờ Ý là đang cần bạn là
+2026-11-07 13:16:18 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 13:16:18 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 13:16:18 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 13:16:18 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 13:16:18 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 13:16:18 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 13:16:18 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:16:18 [INFO] [Cycle 26] Hoàn thành 215s | 0 bài mới | 0 match | Nghỉ 385s
+2026-11-07 13:22:42 [INFO] 
+[Cycle 27] Bắt đầu...
+2026-11-07 13:26:13 [INFO] [Batch 1] 13 bài thu được — bắt đầu xử lý...
+2026-11-07 13:26:13 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 23 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 13:26:13 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 13:26:13 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 13:26:13 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 13:26:13 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 13:26:13 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày 01059545131 bạn nhắn sđt này n
+2026-11-07 13:26:13 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 13:26:13 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 23 giờ E lên gr trường gacho
+2026-11-07 13:26:13 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 13:26:13 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 23 giờ Cần tìm ng ở ghép k
+2026-11-07 13:26:13 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:26:13 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 16 giờ Tháng 12 vào ở
+2026-11-07 13:26:13 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 13:26:13 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:26:13 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 13:26:13 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 13:26:13 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 13:26:13 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 13:26:13 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 13:26:13 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 15 giờ Ý là đang cần bạn là
+2026-11-07 13:26:13 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 13:26:13 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 13:26:13 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 13:26:13 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 13:26:13 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 13:26:13 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 13:26:13 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:26:13 [INFO] [Cycle 27] Hoàn thành 210s | 0 bài mới | 0 match | Nghỉ 390s
+2026-11-07 13:32:43 [INFO] 
+[Cycle 28] Bắt đầu...
+2026-11-07 13:36:17 [INFO] [Batch 1] 13 bài thu được — bắt đầu xử lý...
+2026-11-07 13:36:17 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 4 giờ Bên mình có cho gạo k c
+2026-11-07 13:36:17 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 23 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 13:36:17 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 13:36:17 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 13:36:17 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 13:36:17 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 13:36:17 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 13:36:17 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 13:36:17 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:36:17 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:36:17 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 13:36:17 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 13:36:17 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:36:17 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:36:17 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 13:36:17 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 13:36:17 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 13:36:17 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 13:36:17 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 13:36:17 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 15 giờ Ý là đang cần bạn là
+2026-11-07 13:36:17 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 13:36:17 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 13:36:17 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 13:36:17 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 13:36:17 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 13:36:17 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 13:36:17 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:36:17 [INFO] [Cycle 28] Hoàn thành 215s | 0 bài mới | 0 match | Nghỉ 385s
+2026-11-07 13:42:43 [INFO] 
+[Cycle 29] Bắt đầu...
+2026-11-07 13:46:15 [INFO] [Batch 1] 13 bài thu được — bắt đầu xử lý...
+2026-11-07 13:46:15 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 5 giờ Bên mình có cho gạo k c
+2026-11-07 13:46:15 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 23 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 13:46:15 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 13:46:15 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 13:46:15 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 13:46:15 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 13:46:15 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 13:46:15 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 13:46:15 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:46:15 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:46:15 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 13:46:15 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 13:46:15 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:46:15 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:46:15 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 13:46:15 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 13:46:15 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 13:46:15 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 13:46:15 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 13:46:15 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 15 giờ Ý là đang cần bạn là
+2026-11-07 13:46:15 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 13:46:15 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 13:46:15 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 13:46:15 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 13:46:15 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 13:46:15 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 13:46:15 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:46:15 [INFO] [Cycle 29] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 13:52:43 [INFO] 
+[Cycle 30] Bắt đầu...
+2026-11-07 13:56:23 [INFO] [Batch 1] 14 bài thu được — bắt đầu xử lý...
+2026-11-07 13:56:23 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 5 giờ Bên mình có cho gạo k c
+2026-11-07 13:56:23 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 23 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 13:56:23 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 13:56:23 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 13:56:23 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 13:56:23 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 13:56:23 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngàyC thử ra bđs tìm xem
+2026-11-07 13:56:23 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 13:56:23 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 13:56:23 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:56:23 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:56:23 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 13:56:23 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 13:56:23 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 13:56:23 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:56:23 [INFO] [Batch 2] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 13:56:23 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 13:56:23 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 13:56:23 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 13:56:23 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 13:56:23 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 15 giờ Ý là đang cần bạn là
+2026-11-07 13:56:23 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 13:56:23 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 13:56:23 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 13:56:23 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 13:56:23 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 13:56:23 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 13:56:23 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 13:56:23 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 13:56:23 [INFO] [Cycle 30] Hoàn thành 220s | 0 bài mới | 0 match | Nghỉ 380s
+2026-11-07 14:02:43 [INFO] 
+[Cycle 31] Bắt đầu...
+2026-11-07 14:06:28 [INFO] [Batch 1] 15 bài thu được — bắt đầu xử lý...
+2026-11-07 14:06:28 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 5 giờ Bên mình có cho gạo k c
+2026-11-07 14:06:28 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 23 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 14:06:28 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 14:06:28 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 14:06:28 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 14:06:28 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 14:06:28 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 14:06:28 [DEBUG] skip exists | 4541433702852288 | Mellon_vv · 1 ngày Bạn ơi, mình có thể liên lạc ch
+2026-11-07 14:06:28 [DEBUG] skip exists | 4541461869516138 | CreativeRabbit9046 · 1 ngày e nhắn rùi ạ còn giá t
+2026-11-07 14:06:28 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 14:06:28 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 14:06:28 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:06:28 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:06:28 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 16 giờ Tháng 12 vào ở
+2026-11-07 14:06:28 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 14:06:28 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:06:28 [INFO] [Batch 2] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 14:06:28 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 14:06:28 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 14:06:28 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 14:06:28 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 14:06:28 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 15 giờ Ý là đang cần bạn là
+2026-11-07 14:06:28 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 14:06:28 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 14:06:28 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 14:06:28 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 14:06:28 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 14:06:28 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 14:06:28 [DEBUG] skip exists | 4336061913196291 | HeartfeltBeet3020 · 1 ngày TUYỂN NHÂN VIÊN BẾP – Q
+2026-11-07 14:06:28 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:06:28 [INFO] [Cycle 31] Hoàn thành 225s | 0 bài mới | 0 match | Nghỉ 375s
+2026-11-07 14:12:43 [INFO] 
+[Cycle 32] Bắt đầu...
+2026-11-07 14:16:21 [INFO] [Batch 1] 14 bài thu được — bắt đầu xử lý...
+2026-11-07 14:16:21 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 5 giờ Bên mình có cho gạo k c
+2026-11-07 14:16:21 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 23 giờ · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 14:16:21 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 14:16:21 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 14:16:21 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày01076266106 bạn gử
+2026-11-07 14:16:21 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 14:16:21 [DEBUG] skip exists | 4541433702852288 | Mellon_vv · 1 ngày Bạn ơi, mình có thể liên lạc ch
+2026-11-07 14:16:21 [DEBUG] skip exists | 4541461869516138 | CreativeRabbit9046 · 1 ngày e nhắn rùi ạ còn giá t
+2026-11-07 14:16:21 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 14:16:21 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 14:16:21 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:16:21 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:16:21 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 17 giờ Tháng 12 vào ở
+2026-11-07 14:16:21 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 14:16:21 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:16:21 [INFO] [Batch 2] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 14:16:21 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 14:16:21 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 14:16:21 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 14:16:21 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 5 ngàyLên cungpang mua xái 
+2026-11-07 14:16:21 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 14:16:21 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 16 giờ Ý là đang cần bạn là
+2026-11-07 14:16:21 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 14:16:21 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 14:16:21 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 14:16:21 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 14:16:21 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 14:16:21 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 14:16:21 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:16:21 [INFO] [Cycle 32] Hoàn thành 218s | 0 bài mới | 0 match | Nghỉ 382s
+2026-11-07 14:22:43 [INFO] 
+[Cycle 33] Bắt đầu...
+2026-11-07 14:26:18 [INFO] [Batch 1] 15 bài thu được — bắt đầu xử lý...
+2026-11-07 14:26:18 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 5 giờ Bên mình có cho gạo k c
+2026-11-07 14:26:18 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 1 ngày · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 14:26:18 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 14:26:18 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 14:26:18 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 14:26:18 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 14:26:18 [DEBUG] ❌ Filtered | post=1138577499135873 | reason=no_transfer_keyword | score=0
+2026-11-07 14:26:18 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngàyC thử ra bđs tìm xem
+2026-11-07 14:26:18 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 14:26:18 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 14:26:18 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:26:18 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:26:18 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 14:26:18 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 14:26:18 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:26:18 [INFO] [Batch 1] Xong: 1 bài mới, 0 match/gửi Telegram
+2026-11-07 14:26:18 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 14:26:18 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 14:26:18 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 14:26:18 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 14:26:18 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 14:26:18 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 16 giờ Ý là đang cần bạn là
+2026-11-07 14:26:18 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 14:26:18 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 14:26:18 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 14:26:18 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 14:26:18 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 14:26:18 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 14:26:18 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:26:18 [INFO] [Cycle 33] Hoàn thành 216s | 1 bài mới | 0 match | Nghỉ 384s
+2026-11-07 14:32:43 [INFO] 
+[Cycle 34] Bắt đầu...
+2026-11-07 14:36:19 [INFO] [Batch 1] 14 bài thu được — bắt đầu xử lý...
+2026-11-07 14:36:19 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 5 giờ Bên mình có cho gạo k c
+2026-11-07 14:36:19 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 1 ngày · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 14:36:19 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 14:36:19 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 14:36:19 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 14:36:19 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 14:36:19 [DEBUG] skip exists | 1138577499135873 | Minh Ly · 27 phút Có ảnh phòng k b
+2026-11-07 14:36:19 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 14:36:19 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 14:36:19 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:36:19 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:36:19 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 14:36:19 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 14:36:19 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:36:19 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:36:19 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 14:36:19 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 14:36:19 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 14:36:19 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 14:36:19 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 14:36:19 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 16 giờ Ý là đang cần bạn là
+2026-11-07 14:36:19 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 14:36:19 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 14:36:19 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 14:36:19 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 1 ngày Có hồi trước m
+2026-11-07 14:36:19 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 14:36:19 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 14:36:19 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:36:19 [INFO] [Cycle 34] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 14:42:43 [INFO] 
+[Cycle 35] Bắt đầu...
+2026-11-07 14:46:11 [INFO] [Batch 1] 15 bài thu được — bắt đầu xử lý...
+2026-11-07 14:46:11 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 6 giờ Bên mình có cho gạo k c
+2026-11-07 14:46:11 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 1 ngày · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 14:46:11 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 14:46:11 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 14:46:11 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 14:46:11 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 14:46:11 [DEBUG] skip exists | 1138577499135873 | Minh Ly · 37 phút Có ảnh phòng k b
+2026-11-07 14:46:11 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngàyC thử ra bđs tìm xem
+2026-11-07 14:46:11 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 14:46:11 [DEBUG] skip exists | 4541433702852288 | Mellon_vv · 1 ngày Bạn ơi, mình có thể liên lạc ch
+2026-11-07 14:46:11 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:46:11 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:46:11 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 14:46:11 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 14:46:11 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:46:11 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:46:11 [INFO] [Batch 2] 8 bài thu được — bắt đầu xử lý...
+2026-11-07 14:46:11 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 14:46:11 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 14:46:11 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 14:46:11 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 5 ngàyLên cungpang mua xái 
+2026-11-07 14:46:11 [DEBUG] skip exists | 4339536116182204 | DeterminedRabbit1668 · 1 ngày tiếng hàn gtiep cơ b
+2026-11-07 14:46:11 [DEBUG] skip exists | 4339411372861345 | Trần Thị Hồng Yến · 1 ngày Có quan trọng giới tính
+2026-11-07 14:46:12 [INFO] ⚠️ Missed long post | len=48 | score=0 | reason=no_transfer_keyword | preview=Người tham gia ẩn danh 773 · 1 ngày Cần dklt k ạ
+2026-11-07 14:46:12 [DEBUG] ❌ Filtered | post=4339366399532509 | reason=no_transfer_keyword | score=0
+2026-11-07 14:46:12 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 14:46:12 [INFO] [Batch 2] Xong: 1 bài mới, 0 match/gửi Telegram
+2026-11-07 14:46:12 [INFO] [Cycle 35] Hoàn thành 209s | 1 bài mới | 0 match | Nghỉ 391s
+2026-11-07 14:52:43 [INFO] 
+[Cycle 36] Bắt đầu...
+2026-11-07 14:56:16 [INFO] [Batch 1] 14 bài thu được — bắt đầu xử lý...
+2026-11-07 14:56:16 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 6 giờ Bên mình có cho gạo k c
+2026-11-07 14:56:16 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 1 ngày · Nhắn mình với ah 01099682668 Bạ
+2026-11-07 14:56:16 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 14:56:16 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 14:56:16 [DEBUG] skip exists | 1138691479124475 | StylishAvocado2020 · 1 ngày · giúp e với ah
+2026-11-07 14:56:16 [DEBUG] skip exists | 1138585785801711 | IntelligentSeahorse8944 · 1 ngày 01076266106 bạn g
+2026-11-07 14:56:16 [DEBUG] skip exists | 1138521382474818 | BrightHeron2274 · 1 ngàyC thử ra bđs tìm xem
+2026-11-07 14:56:16 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 14:56:16 [DEBUG] skip exists | 4541529092842749 | 김유경 · 1 ngày · 300/35 tach bep
+2026-11-07 14:56:16 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:56:16 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:56:16 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 14:56:16 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 14:56:16 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 14:56:16 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:56:16 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 14:56:16 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 14:56:16 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 14:56:16 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 14:56:16 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 14:56:16 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 16 giờ Ý là đang cần bạn là
+2026-11-07 14:56:16 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 14:56:16 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 14:56:16 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 14:56:16 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 2 ngày Có hồi trước m
+2026-11-07 14:56:16 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 14:56:16 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 14:56:16 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 14:56:17 [INFO] [Cycle 36] Hoàn thành 214s | 0 bài mới | 0 match | Nghỉ 386s
+2026-11-07 15:02:44 [INFO] 
+[Cycle 37] Bắt đầu...
+2026-11-07 15:06:17 [INFO] [Batch 1] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 15:06:17 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 6 giờ Bên mình có cho gạo k c
+2026-11-07 15:06:17 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 15:06:17 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 15:06:17 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 15:06:17 [DEBUG] skip exists | 1138574222469534 | Ngọc Luyến · 1 ngày01059545131 bạn nhắn sđt này nè
+2026-11-07 15:06:17 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 15:06:17 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 15:06:17 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:06:17 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:06:17 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 15:06:17 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 15:06:17 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:06:17 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:06:17 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 15:06:17 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 15:06:17 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 15:06:17 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 5 ngày Lên cungpang mua xái
+2026-11-07 15:06:17 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 15:06:17 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 16 giờ Ý là đang cần bạn là
+2026-11-07 15:06:17 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 15:06:17 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 15:06:17 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 15:06:17 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 2 ngày Có hồi trước m
+2026-11-07 15:06:17 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 15:06:17 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 15:06:17 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:06:17 [INFO] [Cycle 37] Hoàn thành 213s | 0 bài mới | 0 match | Nghỉ 387s
+2026-11-07 15:12:44 [INFO] 
+[Cycle 38] Bắt đầu...
+2026-11-07 15:16:20 [INFO] [Batch 1] 10 bài thu được — bắt đầu xử lý...
+2026-11-07 15:16:20 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 6 giờ Bên mình có cho gạo k c
+2026-11-07 15:16:20 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 15:16:20 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 15:16:20 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 15:16:20 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 15:16:20 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 15:16:20 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:16:20 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:16:20 [DEBUG] skip exists | 1161669686813131 | Người tham gia ẩn danh 390 · 18 giờ Tháng 12 vào ở
+2026-11-07 15:16:20 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 15:16:20 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:16:20 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 15:16:20 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 15:16:20 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 15:16:20 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 15:16:20 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 15:16:20 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 17 giờ Ý là đang cần bạn là
+2026-11-07 15:16:20 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 15:16:20 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 15:16:20 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 15:16:20 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 2 ngày Có hồi trước m
+2026-11-07 15:16:20 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 15:16:20 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 15:16:20 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:16:20 [INFO] [Cycle 38] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 15:22:44 [INFO] 
+[Cycle 39] Bắt đầu...
+2026-11-07 15:26:18 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 15:26:18 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 6 giờ Bên mình có cho gạo k c
+2026-11-07 15:26:18 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 15:26:18 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 15:26:18 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 15:26:18 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 15:26:18 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 15:26:18 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:26:18 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:26:18 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 15:26:18 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 15:26:18 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:26:18 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:26:18 [INFO] [Batch 2] 12 bài thu được — bắt đầu xử lý...
+2026-11-07 15:26:18 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 15:26:18 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 15:26:18 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 15:26:18 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 5 ngàyLên cungpang mua xái 
+2026-11-07 15:26:18 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 15:26:18 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 17 giờ Ý là đang cần bạn là
+2026-11-07 15:26:18 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 15:26:18 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 15:26:18 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 15:26:18 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 2 ngày Có hồi trước m
+2026-11-07 15:26:18 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 15:26:18 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 15:26:18 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:26:18 [INFO] [Cycle 39] Hoàn thành 215s | 0 bài mới | 0 match | Nghỉ 385s
+2026-11-07 15:32:44 [INFO] 
+[Cycle 40] Bắt đầu...
+2026-11-07 15:36:19 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 15:36:19 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 6 giờ Bên mình có cho gạo k c
+2026-11-07 15:36:19 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 15:36:19 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 15:36:19 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 15:36:19 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 15:36:19 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 15:36:19 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:36:19 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:36:19 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 15:36:19 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 15:36:19 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:36:19 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:36:19 [INFO] [Batch 2] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 15:36:19 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 15:36:19 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 15:36:19 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 15:36:19 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 15:36:19 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 17 giờ Ý là đang cần bạn là
+2026-11-07 15:36:19 [DEBUG] skip exists | 4339218759547273 | SharpSloth2409 · 1 ngày Có cần dklt ko ạ, e xin ng
+2026-11-07 15:36:19 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 15:36:19 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 15:36:19 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 2 ngày Có hồi trước m
+2026-11-07 15:36:19 [DEBUG] skip exists | 4333163973486085 | MotivatedPomelo253 · 2 ngày · ôi quản trị viên duy
+2026-11-07 15:36:19 [DEBUG] skip exists | 4335461499922999 | Hêhhee_9892 · 2 ngày Làm hol hay bếp vậy b
+2026-11-07 15:36:19 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:36:19 [INFO] [Cycle 40] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 15:42:44 [INFO] 
+[Cycle 41] Bắt đầu...
+2026-11-07 15:46:22 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 15:46:22 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 7 giờ Bên mình có cho gạo k c
+2026-11-07 15:46:22 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 15:46:22 [DEBUG] skip exists | 1138844622442494 | Minh Phương · 1 ngày · nhắn m với
+2026-11-07 15:46:22 [DEBUG] skip exists | 1138829042444052 | ExcellentTulip9801 · 1 ngày 01096511402 ib mình
+2026-11-07 15:46:22 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 15:46:22 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngày E lên gr trường gacho
+2026-11-07 15:46:22 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:46:22 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:46:22 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 15:46:22 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 15:46:22 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 15:46:22 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:46:22 [INFO] [Batch 2] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 15:46:22 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 15:46:22 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 15:46:22 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 15:46:22 [DEBUG] skip exists | 4339319022870580 | Nguyễn Phương Nam · 1 ngày Quán nhận 알바 ca tối khô
+2026-11-07 15:46:22 [DEBUG] skip exists | 4339284626207353 | MemorablePeacock4207 · 17 giờ Ý là đang cần bạn là
+2026-11-07 15:46:22 [DEBUG] skip exists | 4339052539563895 | ThrillingAvocado8254 · 1 ngày Nghỉ t2,4 đc k ạ
+2026-11-07 15:46:22 [DEBUG] skip exists | 4330929627042853 | Người tham gia ẩn danh 544 · 2 ngày bảo vc cmt nma
+2026-11-07 15:46:22 [DEBUG] skip exists | 4330993407036475 | ExcitingBee3493 · 2 ngày Sđt việt hay hàn vậy ạ
+2026-11-07 15:46:22 [DEBUG] skip exists | 4332544253548057 | Người tham gia ẩn danh 377 · 2 ngày Có hồi trước m
+2026-11-07 15:46:22 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 15:46:22 [INFO] [Cycle 41] Hoàn thành 219s | 0 bài mới | 0 match | Nghỉ 381s
+2026-11-07 17:20:03 [INFO] ============================================================
+2026-11-07 17:20:03 [INFO] Facebook Housing Monitor AUTO — BATCH MODE
+2026-11-07 17:20:03 [INFO] Interval: 600s | Batch pause: 60s | Filter: STRICT v3
+2026-11-07 17:20:03 [INFO] ============================================================
+2026-11-07 17:20:03 [INFO] 
+[Cycle 1] Bắt đầu...
+2026-11-07 17:23:38 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 17:23:38 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 8 giờ Bên mình có cho gạo k c
+2026-11-07 17:23:38 [DEBUG] skip exists | 1138933019100321 | Seon Hwang · 1 ngày Mình nhượng ONEROOM KHÔNG TÁCH
+2026-11-07 17:23:38 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 17:23:38 [DEBUG] skip exists | 4541433702852288 | Mellon_vv · 1 ngày Bạn ơi, mình có thể liên lạc ch
+2026-11-07 17:23:38 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:23:38 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:23:38 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 17:23:38 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 17:23:38 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:23:38 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 17:23:38 [INFO] [Batch 2] 5 bài thu được — bắt đầu xử lý...
+2026-11-07 17:23:38 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 17:23:38 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 17:23:38 [DEBUG] skip exists | 2907842919600248 | AleisterK9 · 4 ngày Đệm bao nhiêu v ạ
+2026-11-07 17:23:38 [DEBUG] skip exists | 2906795659704974 | ExhilaratingYuzu5447 · 5 ngàyLên cungpang mua xái 
+2026-11-07 17:23:48 [INFO] Telegram sent | post=2068938987129909 | confidence=high | score=20 | keywords=['nhượng', 'nhượng nhà', 'em nhượng', '2룸', 'nhà 2룸', 'ngay ga', '어린이대공원', 'transfer_phrase']
+2026-11-07 17:23:48 [INFO] ✅ Notified | post=2068938987129909 | conf=high | score=20 | kw=['nhượng', 'nhượng nhà', 'em nhượng', '2룸', 'nhà 2룸', 'ngay ga', '어린이대공원', 'transfer_phrase']
+2026-11-07 17:23:48 [INFO] [Batch 2] Xong: 1 bài mới, 1 match/gửi Telegram
+2026-11-07 17:23:48 [INFO] [Cycle 1] Hoàn thành 225s | 1 bài mới | 1 match | Nghỉ 375s
+2026-11-07 17:30:03 [INFO] 
+[Cycle 2] Bắt đầu...
+2026-11-07 17:33:41 [INFO] [Batch 1] 11 bài thu được — bắt đầu xử lý...
+2026-11-07 17:33:41 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 8 giờ Bên mình có cho gạo k c
+2026-11-07 17:33:41 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 1 ngày · Nhắn mình với ah 01099682668…
+2026-11-07 17:33:41 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 17:33:41 [DEBUG] skip exists | 4541433702852288 | Mellon_vv · 1 ngày Bạn ơi, mình có thể liên lạc ch
+2026-11-07 17:33:41 [DEBUG] skip exists | 4541461869516138 | CreativeRabbit9046 · 1 ngàye nhắn rùi ạ còn giá tr
+2026-11-07 17:33:41 [DEBUG] skip exists | 4541570509505274 | RelaxedCapybara7790 · 1 ngàyE lên gr trường gachon
+2026-11-07 17:33:41 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:33:41 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:33:41 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 17:33:41 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 17:33:41 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:33:41 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 17:33:41 [INFO] [Batch 2] 4 bài thu được — bắt đầu xử lý...
+2026-11-07 17:33:41 [INFO] ⚠️ Missed long post | len=41 | score=0 | reason=no_transfer_keyword | preview=Lưu Thu Trang · 2 ngày Sao lại chuyển rồi
+2026-11-07 17:33:41 [DEBUG] ❌ Filtered | post=2909920186059188 | reason=no_transfer_keyword | score=0
+2026-11-07 17:33:41 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 17:33:42 [INFO] Telegram sent | post=2908383312879542 | confidence=high | score=24 | keywords=['nhượng', 'nhượng nhà', 'mình nhượng', 'ở ga', '2룸', 'tháng', 'nhà 2룸', '어린이대공원', 'transfer_phrase']
+2026-11-07 17:33:42 [INFO] ✅ Notified | post=2908383312879542 | conf=high | score=24 | kw=['nhượng', 'nhượng nhà', 'mình nhượng', 'ở ga', '2룸', 'tháng', 'nhà 2룸', '어린이대공원', 'transfer_phrase']
+2026-11-07 17:33:42 [DEBUG] skip exists | 2068938987129909 | UpbeatCaribou3398 · 1 tuần Em nhượng nhà 2룸 cạnh n
+2026-11-07 17:33:42 [INFO] [Batch 2] Xong: 2 bài mới, 1 match/gửi Telegram
+2026-11-07 17:33:42 [INFO] [Cycle 2] Hoàn thành 219s | 2 bài mới | 1 match | Nghỉ 381s
+2026-11-07 17:40:03 [INFO] 
+[Cycle 3] Bắt đầu...
+2026-11-07 17:43:39 [INFO] [Batch 1] 9 bài thu được — bắt đầu xử lý...
+2026-11-07 17:43:39 [DEBUG] skip exists | 1139511009042522 | NiceGuava1709 · 9 giờ Bên mình có cho gạo k c
+2026-11-07 17:43:39 [DEBUG] skip exists | 1139369592389997 | Nam Anh · 1 ngày · Nhắn mình với ah 01099682668…
+2026-11-07 17:43:39 [DEBUG] skip exists | 4541697949492530 | Thusé Nguyễn · 1 ngày Cọc 3tr tháng 300 Cọc 3tr th
+2026-11-07 17:43:39 [DEBUG] skip exists | 4541433702852288 | Mellon_vv · 1 ngày Bạn ơi, mình có thể liên lạc ch
+2026-11-07 17:43:39 [DEBUG] skip exists | 1162534533393313 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:43:39 [DEBUG] skip exists | 1162449330068500 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:43:39 [DEBUG] skip exists | 1161700526810047 | Hảii Đăngg · 1 ngày có ảnh kh ạ
+2026-11-07 17:43:39 [DEBUG] skip exists | 1161614326818667 | Phạm Văn Dương · 1 ngày cần phòng thì ib mình nha 
+2026-11-07 17:43:39 [DEBUG] skip exists | 1161552753491491 | DaringPomegranate1238 · 1 ngày Cần tìm ng ở ghép k
+2026-11-07 17:43:39 [INFO] [Batch 1] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 17:43:39 [INFO] [Batch 2] 5 bài thu được — bắt đầu xử lý...
+2026-11-07 17:43:39 [DEBUG] skip exists | 2909920186059188 | Lưu Thu Trang · 2 ngày Sao lại chuyển rồi
+2026-11-07 17:43:39 [DEBUG] skip exists | 2909711112746762 | AleisterK9 · 2 ngày Phí bao nhiêu v ad, khoảng 15k
+2026-11-07 17:43:39 [DEBUG] skip exists | 2908383312879542 | UpbeatCaribou3398 · 3 ngày Mình nhượng nhà 2룸 ở ga
+2026-11-07 17:43:39 [DEBUG] skip exists | 2908664386184768 | UpbeatCaribou3398 · 3 ngàyMình nhượng nhà 2룸 ở ga어
+2026-11-07 17:43:39 [DEBUG] skip exists | 2068938987129909 | UpbeatCaribou3398 · 1 tuần Em nhượng nhà 2룸 cạnh n
+2026-11-07 17:43:39 [INFO] [Batch 2] Xong: 0 bài mới, 0 match/gửi Telegram
+2026-11-07 17:43:39 [INFO] [Cycle 3] Hoàn thành 216s | 0 bài mới | 0 match | Nghỉ 384s
+2026-11-07 17:50:03 [INFO] 
+[Cycle 4] Bắt đầu...

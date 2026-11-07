@@ -53,6 +53,7 @@ def _process_posts(posts: list[dict]) -> tuple[int, int]:
 
         # Dedup trước classify
         if post_exists(post["post_id"]):
+            logger.debug("skip exists | %s | %s", post["post_id"], (post.get("text") or "")[:50])
             continue
 
         result = classify(post["text"])
@@ -61,6 +62,15 @@ def _process_posts(posts: list[dict]) -> tuple[int, int]:
             continue
 
         new_count += 1
+
+        # Log rõ bài dài bị filter để dễ chỉnh keyword
+        text_len = len(post.get("text") or "")
+        if not result["matched"] and text_len >= 40:
+            logger.info(
+                "⚠️ Missed long post | len=%d | score=%s | reason=%s | preview=%s",
+                text_len, result["score"], result["reason"],
+                (post.get("text") or "")[:80],
+            )
 
         if result["matched"]:
             matched_count += 1
@@ -120,7 +130,7 @@ def main():
 
     logger.info("=" * 60)
     logger.info("Facebook Housing Monitor AUTO — BATCH MODE")
-    logger.info("Interval: %ss | Batch pause: %ss | Filter: STRICT v2",
+    logger.info("Interval: %ss | Batch pause: %ss | Filter: STRICT v3",
                 INTERVAL, GROUP_CONFIG.get("batch_pause_seconds", 60))
     logger.info("=" * 60)
 

@@ -1,3 +1,17 @@
-2026/11/07-02:37:03.303 3c9c Reusing MANIFEST C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/11/07-02:37:03.303 3c9c Recovering log #295
-2026/11/07-02:37:03.305 3c9c Reusing old log C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/000295.log 
+2026/11/07-21:02:47.428 130c Reusing MANIFEST C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/11/07-21:02:47.429 130c Recovering log #464
+2026/11/07-21:02:47.429 130c Level-0 table #467: started
+2026/11/07-21:02:47.436 130c Level-0 table #467: 22635 bytes OK
+2026/11/07-21:02:47.436 130c Recovering log #467
+2026/11/07-21:02:47.438 130c Reusing old log C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\Local Storage\leveldb/000467.log 
+2026/11/07-21:02:47.443 130c Delete type=0 #464
+2026/11/07-21:02:47.443 130c Delete type=2 #468
+2026/11/07-21:02:47.444 122c Compacting 4@0 + 1@1 files
+2026/11/07-21:02:47.465 122c Generated table #468@0: 29833 keys, 1245853 bytes
+2026/11/07-21:02:47.465 122c Compacted 4@0 + 1@1 files => 1245853 bytes
+2026/11/07-21:02:47.470 122c compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/11/07-21:02:47.470 122c Delete type=2 #456
+2026/11/07-21:02:47.470 122c Delete type=2 #458
+2026/11/07-21:02:47.470 122c Delete type=2 #462
+2026/11/07-21:02:47.470 122c Delete type=2 #465
+2026/11/07-21:02:47.470 122c Delete type=2 #467

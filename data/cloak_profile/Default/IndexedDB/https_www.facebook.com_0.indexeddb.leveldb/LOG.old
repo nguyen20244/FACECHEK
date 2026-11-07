@@ -1,3 +1,12 @@
-2026/11/07-02:38:00.591 4364 Reusing MANIFEST C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/11/07-02:38:00.591 4364 Recovering log #123
-2026/11/07-02:38:00.610 4364 Reusing old log C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/000123.log 
+2026/11/07-21:00:17.404 5bec Reusing MANIFEST C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/11/07-21:00:17.404 5bec Recovering log #156
+2026/11/07-21:00:17.427 5bec Reusing old log C:\Users\nguyen\Desktop\New folder (2)\New folder\New folder\Facebook_Housing_Monitor\data\cloak_profile\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/000156.log 
+2026/11/07-21:00:22.374 5aa8 Level-0 table #161: started
+2026/11/07-21:00:22.395 5aa8 Level-0 table #161: 1493780 bytes OK
+2026/11/07-21:00:22.400 5aa8 Delete type=0 #156
+2026/11/07-21:00:25.735 5aa8 Compacting 1@1 + 1@2 files
+2026/11/07-21:00:25.745 5aa8 Generated table #162@1: 4453 keys, 382413 bytes
+2026/11/07-21:00:25.745 5aa8 Compacted 1@1 + 1@2 files => 382413 bytes
+2026/11/07-21:00:25.746 5aa8 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/11/07-21:00:25.746 5aa8 Delete type=2 #158
+2026/11/07-21:00:25.746 5aa8 Delete type=2 #161

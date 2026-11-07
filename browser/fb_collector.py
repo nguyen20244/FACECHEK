@@ -30,7 +30,7 @@ GROUP_CONFIG       = json.loads(Path("config/groups.json").read_text(encoding="u
 GROUPS             = [g for g in GROUP_CONFIG["groups"] if g.get("enabled")]
 BATCH_PAUSE        = int(GROUP_CONFIG.get("batch_pause_seconds", 60))
 
-SCROLL_TIMES       = 8
+SCROLL_TIMES       = 5
 SCROLL_PAUSE       = 2.8
 PAGE_TIMEOUT       = 45_000
 HEADLESS           = False
@@ -84,10 +84,17 @@ def _recover_to_group(page, url: str) -> bool:
 
 
 def _navigate_to_group(page, url: str, name: str) -> bool:
+    # Ưu tiên mở thẳng chronological để tránh click filter bị redirect
+    chrono_url = url.rstrip("/")
+    if "sorting_setting=" not in chrono_url:
+        sep = "&" if "?" in chrono_url else "?"
+        chrono_url = f"{chrono_url}{sep}sorting_setting=CHRONOLOGICAL"
+
     for attempt in range(1, NAV_RETRIES + 1):
         try:
-            print(f"  → Navigate lần {attempt}: {url}")
-            page.goto(url, timeout=PAGE_TIMEOUT, wait_until="domcontentloaded")
+            target = chrono_url if attempt == 1 else url
+            print(f"  → Navigate lần {attempt}: {target}")
+            page.goto(target, timeout=PAGE_TIMEOUT, wait_until="domcontentloaded")
             time.sleep(3.5)
             if _is_on_group_page(page, url):
                 print(f"  ✅ Đang đúng trang group: {name}")
@@ -243,13 +250,14 @@ def _parse_posts(page, group_name: str) -> list[dict]:
 
             print(f"  [DEBUG] Article {idx+1}: raw_len={len(text)} | clean_len={len(clean)} | preview: {clean[:90]!r}")
 
-            if len(clean) < 30:
+            if len(clean) < 25:
                 print("       → Bỏ vì nội dung quá ngắn")
                 continue
 
+            # Chỉ bỏ comment rất ngắn; bài >=40 ký tự giữ lại để filter score quyết định
             is_likely_comment = (
-                len(clean) < 45 and
-                any(w in clean.lower() for w in ["ib", "check tin", "rep ", "còn ko", "xin gia"])
+                len(clean) < 40 and
+                any(w in clean.lower() for w in ["ib", "check tin", "rep ", "còn ko", "xin gia", "inb mik", "liên hệ mình"])
             )
             if is_likely_comment:
                 print("       → Bỏ vì nghi là comment ngắn")
@@ -303,57 +311,112 @@ def _parse_posts(page, group_name: str) -> list[dict]:
     return unique
 
 
+def _context_alive(context) -> bool:
+    """True nếu browser context vẫn mở."""
+    try:
+        _ = context.pages  # truy cập thuộc tính — sẽ lỗi nếu đã đóng
+        return True
+    except Exception:
+        return False
+
+
 def _scrape_groups(context, groups: list[dict]) -> list[dict]:
-    """Scrape một danh sách group, trả về tất cả posts thu được."""
+    """
+    Scrape một danh sách group, trả về tất cả posts thu được.
+    Dùng 1 page dùng chung trong batch để tránh TargetClosedError
+    khi mở quá nhiều tab / context bị đóng giữa chừng.
+    """
     all_posts = []
+    page = None
 
-    for idx, group in enumerate(groups):
-        name = group["name"]
-        url  = group["url"]
-        print(f"\n[INFO] Quét group: {name}")
-
-        if idx > 0:
-            delay = random.uniform(GROUP_DELAY_MIN, GROUP_DELAY_MAX)
-            print(f"  ⏳ Nghỉ {delay:.1f}s trước khi sang group tiếp...")
-            time.sleep(delay)
-
+    try:
+        if not _context_alive(context):
+            print("[ERROR] Browser context đã đóng trước khi scrape batch")
+            return all_posts
         page = context.new_page()
-        try:
-            ok = _navigate_to_group(page, url, name)
-            if not ok:
-                page.close()
+    except Exception as e:
+        print(f"[ERROR] Không tạo được page: {e}")
+        return all_posts
+
+    try:
+        for idx, group in enumerate(groups):
+            name = group["name"]
+            url  = group["url"]
+            print(f"\n[INFO] Quét group: {name}")
+
+            if idx > 0:
+                delay = random.uniform(GROUP_DELAY_MIN, GROUP_DELAY_MAX)
+                print(f"  ⏳ Nghỉ {delay:.1f}s trước khi sang group tiếp...")
+                time.sleep(delay)
+
+            # Context chết giữa chừng → dừng batch, không crash cycle
+            if not _context_alive(context):
+                print(f"[ERROR] Context đã đóng trước group {name} — dừng batch")
+                break
+
+            # Page chết → mở lại trên cùng context
+            try:
+                _ = page.url
+            except Exception:
+                print("  ⚠️ Page đã đóng — tạo page mới...")
+                try:
+                    page = context.new_page()
+                except Exception as e:
+                    print(f"  ❌ Không tạo lại được page: {e}")
+                    break
+
+            try:
+                ok = _navigate_to_group(page, url, name)
+                if not ok:
+                    continue
+
+                # Chỉ click filter UI nếu chưa ở chế độ chronological (tránh redirect)
+                if "sorting_setting=CHRONOLOGICAL" not in page.url:
+                    _click_newest_filter(page, url)
+                else:
+                    print("  ℹ️ Đã ở CHRONOLOGICAL — bỏ qua click filter UI")
+
+                for i in range(SCROLL_TIMES):
+                    if i > 0 and i % 3 == 0:
+                        if not _is_on_group_page(page, url):
+                            print(f"  ⚠️ Bị redirect giữa chừng lúc cuộn {i+1} — thử recover...")
+                            recovered = _recover_to_group(page, url)
+                            if not recovered:
+                                print("  ❌ Không recover được — dừng cuộn group này")
+                                break
+                            print(f"  ✅ Đã recover, tiếp tục cuộn từ {i+1}")
+                    try:
+                        page.evaluate("window.scrollBy(0, window.innerHeight * 2.2)")
+                    except Exception as e:
+                        print(f"  ⚠️ Lỗi scroll: {e}")
+                        break
+                    time.sleep(SCROLL_PAUSE)
+                    print(f"  Cuộn {i+1}/{SCROLL_TIMES}...")
+
+                try:
+                    print(f"  [DEBUG] URL cuối: {page.url}")
+                    print(f"  [DEBUG] Title: {page.title()}")
+                except Exception:
+                    print("  ⚠️ Không đọc được URL/Title (page/context đóng?)")
+                    continue
+
+                if not _is_on_group_page(page, url):
+                    print(f"  ❌ URL sai sau cuộn — bỏ qua parse group {name}")
+                    continue
+
+                posts = _parse_posts(page, name)
+                print(f"  → Thu được {len(posts)} bài từ {name}")
+                all_posts.extend(posts)
+
+            except Exception as e:
+                print(f"[WARN] Lỗi group {name}: {e}")
+                # Nếu context chết thì dừng luôn
+                if not _context_alive(context):
+                    print("[ERROR] Context đã đóng sau lỗi — dừng batch")
+                    break
                 continue
-
-            _click_newest_filter(page, url)
-
-            for i in range(SCROLL_TIMES):
-                if i > 0 and i % 3 == 0:
-                    if not _is_on_group_page(page, url):
-                        print(f"  ⚠️ Bị redirect giữa chừng lúc cuộn {i+1} — thử recover...")
-                        recovered = _recover_to_group(page, url)
-                        if not recovered:
-                            print("  ❌ Không recover được — dừng cuộn group này")
-                            break
-                        print(f"  ✅ Đã recover, tiếp tục cuộn từ {i+1}")
-                page.evaluate("window.scrollBy(0, window.innerHeight * 2.2)")
-                time.sleep(SCROLL_PAUSE)
-                print(f"  Cuộn {i+1}/{SCROLL_TIMES}...")
-
-            print(f"  [DEBUG] URL cuối: {page.url}")
-            print(f"  [DEBUG] Title: {page.title()}")
-
-            if not _is_on_group_page(page, url):
-                print(f"  ❌ URL sai sau cuộn — bỏ qua parse group {name}")
-                page.close()
-                continue
-
-            posts = _parse_posts(page, name)
-            print(f"  → Thu được {len(posts)} bài từ {name}")
-            all_posts.extend(posts)
-
-        except Exception as e:
-            print(f"[WARN] Lỗi group {name}: {e}")
-        finally:
+    finally:
+        if page is not None:
             try:
                 page.close()
             except Exception:
@@ -362,65 +425,83 @@ def _scrape_groups(context, groups: list[dict]) -> list[dict]:
     return all_posts
 
 
+def _launch_context():
+    """Mở persistent browser context (cloak)."""
+    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    return cloakbrowser.launch_persistent_context(
+        user_data_dir=str(PROFILE_DIR),
+        headless=HEADLESS,
+        args=["--disable-notifications"],
+    )
+
+
+def _ensure_logged_in(context) -> bool:
+    """True nếu đã login Facebook."""
+    try:
+        page = context.new_page()
+        page.goto(HOME_URL, timeout=PAGE_TIMEOUT)
+        time.sleep(3)
+        url = page.url or ""
+        page.close()
+        if "login" in url or "checkpoint" in url:
+            print("[ERROR] Chưa đăng nhập. Chạy browser/cloak_session.py trước.")
+            return False
+        return True
+    except Exception as e:
+        print(f"[ERROR] Không kiểm tra được login: {e}")
+        return False
+
+
 def collect_by_batch() -> dict[int, list[dict]]:
     """
     Scrape theo batch:
-      - Batch 1 (group.batch == 1): Group 1-3
-      - Nghỉ BATCH_PAUSE_SECONDS
-      - Batch 2 (group.batch == 2): Group 4-6
-    Trả về {1: [...posts batch 1...], 2: [...posts batch 2...]}
+      - Mỗi batch mở context riêng (tránh context chết sau pause 60s)
+      - Batch 1 → nghỉ → Batch 2
+    Trả về {1: [...], 2: [...]}
     """
-    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
-
-    # Chia group theo batch
     batches: dict[int, list] = defaultdict(list)
     for g in GROUPS:
         batch_num = int(g.get("batch", 1))
         batches[batch_num].append(g)
 
     result: dict[int, list[dict]] = {}
+    sorted_batches = sorted(batches.keys())
 
-    context = cloakbrowser.launch_persistent_context(
-        user_data_dir=str(PROFILE_DIR),
-        headless=HEADLESS,
-        args=["--disable-notifications"],
-    )
+    for batch_num in sorted_batches:
+        groups_in_batch = batches[batch_num]
+        print(f"\n{'='*60}")
+        print(f"[BATCH {batch_num}] Bắt đầu — {len(groups_in_batch)} group: "
+              f"{[g['name'] for g in groups_in_batch]}")
+        print(f"{'='*60}")
 
-    try:
-        # Kiểm tra login
-        check_page = context.new_page()
-        check_page.goto(HOME_URL, timeout=PAGE_TIMEOUT)
-        time.sleep(3)
-        if "login" in check_page.url or "checkpoint" in check_page.url:
-            print("[ERROR] Chưa đăng nhập. Chạy browser/cloak_session.py trước.")
-            check_page.close()
-            context.close()
-            return {}
-        check_page.close()
-
-        sorted_batches = sorted(batches.keys())
-
-        for batch_num in sorted_batches:
-            groups_in_batch = batches[batch_num]
-            print(f"\n{'='*60}")
-            print(f"[BATCH {batch_num}] Bắt đầu — {len(groups_in_batch)} group: "
-                  f"{[g['name'] for g in groups_in_batch]}")
-            print(f"{'='*60}")
+        context = None
+        try:
+            context = _launch_context()
+            if not _ensure_logged_in(context):
+                result[batch_num] = []
+                try:
+                    context.close()
+                except Exception:
+                    pass
+                continue
 
             posts = _scrape_groups(context, groups_in_batch)
             result[batch_num] = posts
             print(f"\n[BATCH {batch_num}] Xong — thu được {len(posts)} bài")
+        except Exception as e:
+            print(f"[ERROR] Batch {batch_num} failed: {e}")
+            result[batch_num] = result.get(batch_num, [])
+        finally:
+            if context is not None:
+                try:
+                    context.close()
+                except Exception:
+                    pass
 
-            # Nghỉ giữa batch (trừ batch cuối)
-            if batch_num != sorted_batches[-1]:
-                print(f"\n⏸️  Nghỉ {BATCH_PAUSE}s giữa batch {batch_num} và batch {batch_num+1}...")
-                time.sleep(BATCH_PAUSE)
-
-    finally:
-        try:
-            context.close()
-        except Exception:
-            pass
+        # Nghỉ giữa batch (trừ batch cuối) — context đã đóng, không sợ chết giữa chừng
+        if batch_num != sorted_batches[-1]:
+            print(f"\n⏸️  Nghỉ {BATCH_PAUSE}s giữa batch {batch_num} và batch {batch_num + 1}...")
+            time.sleep(BATCH_PAUSE)
 
     total = sum(len(v) for v in result.values())
     print(f"\n[INFO] Tổng: {total} bài từ {len(GROUPS)} group ({len(sorted_batches)} batch)")

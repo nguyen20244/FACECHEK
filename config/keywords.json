@@ -1,40 +1,41 @@
 {
-  "_comment": "transfer = người nhượng phòng | seek = người tìm phòng",
+  "_comment": "transfer = người nhượng phòng | seek = người tìm phòng. Mở rộng v3 để bắt nhiều bài nhượng thực tế.",
 
   "transfer_keywords_ko": [
-    "서울대입구", "숭실", "양도해요", "양도 가능"
+    "서울대입구", "숭실", "양도해요", "양도 가능", "양도", "계약 승계",
+    "방 빼", "퇴실", "입주 가능", "즉시 입주", "보증금", "월세", "전세"
   ],
 
   "transfer_keywords_vi": [
-    "pass oneroom",
-    "mình muốn nhượng nhà",
-    "nhượng phòng", "nhượng lại", "đi bộ",
-    "nhượng nhà ở", "nhượng nhà",
-    "nhượng phòng oneroom",
-    "sang nhượng", "Phòng ở", "chuyển nhượng",
-    "sang lại phòng", "cần sang lại", "muốn sang lại",
-    "nhà ở ga", " cần nhượng 1 phòng", "Nhượng phòng ở",
-    "trả phòng", "dọn ra", "hết hợp đồng sớm",
-    "không ở được nữa", "cần người thay", "ai thay tôi",
-    "cần nhượng", "muốn nhượng", "e nhượng", "mình nhượng",
-    "cọc 5tr", "cọc 3tr", "cọc 1tr", "cọc 300",
-    "soongsil", "konte", "đi bộ", "đi bộ", "mình có nhà", "sạch",
-    "cách trường", "điện", "nước", "ở ga",
-    "ngay gần", "gần nhà", "Nhượng nhà", "địa chỉ", "nhà ở gần trường"
+    "nhượng", "nhượng nhà", "nhượng phòng", "nhượng lại", "nhượng oneroom",
+    "sang nhượng", "chuyển nhượng", "sang lại", "sang lại phòng",
+    "pass", "pass nhà", "pass phòng", "pass oneroom", "pass room",
+    "cần pass", "muốn pass", "e nhượng", "em nhượng", "mình nhượng",
+    "cần nhượng", "muốn nhượng", "mình muốn nhượng",
+    "trả phòng", "dọn ra", "hết hợp đồng", "Nhượng oneroom",
+    "tách bếp", "cần người thay", "ai thay tôi",
+    "cọc", "cọc 1tr", "cọc 2tr", "cọc 3tr", "cọc 5tr", "cọc 300",
+    "tiền nhà", "đi bus", "đi bộ", "cạnh ga", "gần ga", "cách ga",
+    "oneroom", "one room", "1룸", "2룸", "3룸", "투룸", "고시원",
+    "gosiwon", "nhà line", "điện ga riêng", "điện nước",
+    "gần trường", "cách trường", "ngay gần", "ở ga",
+    "mình có nhà", "có nhà", "phòng trống", "còn phòng",
+    "nhượng 2룸", "nhượng 1룸", "nhà 2룸", "nhà 1룸",
+    "chuyển đi", "về nước", "về vn", "đã bao gồm",
+    "phí quản lý", "cạnh ga", "ngay ga",
+    "soongsil", "konte", "Nhà tầng"
   ],
 
   "seek_keywords_ko": [
-    "회기", "수유역", "구하고 있어요"
+    "회기", "수유역", "회", "어린이대공원", "방 찾아요"
   ],
 
   "seek_keywords_vi": [
-    "tìm phòng", "cần thuê", "muốn thuê",
+    "tìm phòng", "tìm nhà", "cần thuê", "muốn thuê", "thuê phòng",
     "ai có phòng", "phòng trống không", "muốn tìm nhà",
-    "đang tìm phòng", "cần tìm phòng", "thuê phòng",
-    "quanh khu vực", "có ai biết không", "Cần tìm nhà 2 phòng",
-    "có ai nhượng nhà", " đang tìm nhà", "800", " 700",
-    "suyu", "có ai nhượng nhà", "có ai nhượng nhà",
-     "có ai nhượng nhà", "có ai nhượng nhà", "có ai nhượng nhà"
+    "đang tìm phòng", "cần tìm phòng", "cần tìm nhà",
+    "tìm người ở ghép", "tìm chỗ ở", "quanh khu vực",
+    "Hyehwa", "có ai nhượng", "đang tìm nhà"
   ],
 
   "exclude_if_only_seek": true
